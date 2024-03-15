@@ -2,7 +2,7 @@ import { Quiz } from "./quiz/Quiz";
 
 function App() {
   return (
-    <Quiz />
+    <h1>HI</h1>
   );
 }
 
