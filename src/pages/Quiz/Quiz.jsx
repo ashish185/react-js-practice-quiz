@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { scopeQuestions } from "../topics/scope-and-hoisting";
 import "./quiz.css";
+import { scopeQuestions } from "../Quiz/topics/scope-and-hoisting";
 
 const Question = () => {
     const [selected, setSelected] = useState({});
@@ -67,6 +67,8 @@ const Question = () => {
   );
 };
 
-export const Quiz = () => {
+const Quiz = () => {
   return <Question />;
 };
+
+export default Quiz;

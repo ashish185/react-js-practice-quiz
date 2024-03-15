@@ -1,4 +1,5 @@
-import { Quiz } from "./quiz/Quiz";
+
+import Quiz from './pages/Quiz/Quiz';
 
 function App() {
   return (
