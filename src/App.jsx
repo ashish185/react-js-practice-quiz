@@ -3,7 +3,7 @@ import Quiz from './pages/Quiz/Quiz';
 
 function App() {
   return (
-    <Quiz />
+    <h1>HI</h1>
   );
 }
 
