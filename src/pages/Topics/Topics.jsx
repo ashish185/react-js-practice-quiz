@@ -24,7 +24,7 @@ const TOPICS = () => {
         Linkedin js quiz
       </a>
       {Object.keys(TOPICS_QUIZ).map((topic) => (
-        <div key={topic}>
+        <div key={topic} style={{margin: '1% 0'}}>
           <button onClick={onClickHandler}>{topic}</button>
         </div>
       ))}

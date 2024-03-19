@@ -1,7 +1,5 @@
-import { TOPICS_QUIZ } from "./pages/Quiz/topics/topics-mappings";
-import TOPICS from "./pages/Topics";
+import TOPICS from "./pages/Topics/Topics";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Quiz from "./pages/Quiz/Quiz";
 import { Outlet } from "react-router-dom";
 import ListOfComponent from './ListOfComponents';
 

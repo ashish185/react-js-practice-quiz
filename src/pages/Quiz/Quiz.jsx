@@ -47,7 +47,6 @@ const Quiz = ({ questionList = [] }) => {
           </div>
           <form id="quiz-form">
             <fieldset onClick={handleOnClick}>
-              <legend>Select the correct answer:</legend>
               {options.map((opt) => {
                 return (
                   <label key={opt}>
