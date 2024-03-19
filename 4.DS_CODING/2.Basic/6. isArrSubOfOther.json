@@ -1,0 +1,8 @@
+const arr1=[9,3,4,5];
+
+const valAndIndex= {};
+
+arr1.forEach((el,index) => 
+valAndIndex.val= el;
+valAndIndex.= el;
+)

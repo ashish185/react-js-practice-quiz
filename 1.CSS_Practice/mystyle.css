@@ -1,0 +1,53 @@
+/*********************CSS Units**************************/
+/* 
+Theory: we have certain attribute in html like width, margin, padding, font-size etc which takes length as value.
+So length can be absolute or relative.
+1) Absolute length: px, cm, mm, inc, pt, pc
+Problem: They are fixed length, they does not help in help being responsive.
+For ex: text with font size: 50px may look good on Desktops but look bad on mobile device
+2) Relative Length:relative to another length property.Relative length units scale better
+Kisi ke respect m chotta bda hoyega
+ Ex: em, rem, vw, vh, vmin, vmax, % 
+*/
+/*
+(a)em: Relative to the font-size of the element (2em means 2 times the size of the current font).
+ If font size not available take the inherit the size of it's parent.
+(b)rem:It does not inherit the size of it's parent font-size.it takes root font-size i.e 16px.
+(b)vw: Relative to 1% of the width of the viewport*
+(c)vh
+(d)vmin	Relative to 1% of viewport's* smaller dimension
+(e)vmax	Relative to 1% of viewport's* larger dimension
+(f)%Relative to the parent element
+*/
+/* Note 
+The default font size of page is 16px
+html{
+    font-size:10px
+}
+*/
+div{
+    font-size: 10px; 
+    width: 25em;
+}
+p{
+    font-size: 2em ; /* 2*10px = 20px */
+    width: 2em; /* 2*20px = 40px */ 
+     /* You can check width & height  */ 
+     /* NOw div is it's parent it's font size will be 2*10 = 20px */
+ }
+#divWithID {
+   font-size: 20px; 
+   width: 10rem; /* Width of page is 10*16px = 160px instead of 200px */
+   border: 1px solid black;
+}
+
+.view-port-width-class{
+    font-size: 2vw ; /* = 2% of view port width */
+}
+.view-port-height-class{
+    font-size: 2vh ;
+}
+.percentage{
+    font-size: 200% /* = 2*16px = 32px */;
+}
+

@@ -1,0 +1,17 @@
+Object.apply()
+Object.assign();
+Object.create();
+Object.call();
+Object.bind();
+Object.defineProperties();
+Object.defineProperty();
+Object.freeze();
+Object.seal();
+Object.is();
+Object.isFrozen();
+Object.isSealed();
+Object.getOwnPropertyDescriptor();
+Object.getOwnPropertyNames();
+Object.getOwnPropertySymbols();
+Object.setPrototypeOf();
+Object.toString();

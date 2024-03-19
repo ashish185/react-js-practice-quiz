@@ -1,0 +1,1 @@
+/* Please go to the Hoisting Folder for accessing scopes */

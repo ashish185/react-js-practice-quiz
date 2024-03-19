@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+    border: 2px solid red;
+    background-color: lightgray;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+    background-color:  lightpink;
+    flex: auto; /* The property is added to the flex*/
+}
+
+body{
+    background-color: black;
+    color: white;
+}

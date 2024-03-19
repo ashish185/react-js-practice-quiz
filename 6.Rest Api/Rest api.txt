@@ -1,0 +1,37 @@
+1) What is Restful WebServices? What are it's advanatages?
+Ans: WebServices:The method of communication between two devices over the network.
+WebService k advanatages
+1) Cross platform: Koi bhi language communicate kar skti h
+2) Reusablitiy:
+3) Modularity: ek WebService ek hi function h for ex weather information dena particular city ki
+
+Restful?
+The REST stands for Representational State Transfer. It is an architectural style. It is not a protocol like SOAP. 
+Web Api: JAX-RS
+Package:  javax.ws.rs.GET
+
+Advanateges:
+1) Fast,
+2) Platform independent
+3) Language independent
+4) Allows different data format - Plain Text, HTML, XML, and JSON.
+
+Explain different HTTP methods supported by RESTful web services?
+
+GET: Read-only access to the resource.
+PUT: Creation of new resource.
+DELETE: Removal of a resource.
+POST: Update of an existing resource.
+OPTIONS: Get supported operations on the resource.
+HEAD: Returns HTTP header only, nobody.
+PATCH:  applies partial modifications to a resource.. eskme body  m puri request nhi kuch portion dalte h Patch k liye
+TRACE: is used to trace dubgging k liye use hota header 
+
+What is Idempotant?
+jo chij server ko bar bar request dene par effect nhi krti.
+GET,PUT,DELETE,GET,HEAD,OPTIONS are Idempotant
+POST,PATCH, CONNECT are not idempotent
+
+Several common HTTP methods are safe: GET, HEAD, or OPTIONS.
+All safe methods are also idempotent, but not all idempotent methods are safe. 
+For example, PUT and DELETE are both idempotent but unsafe.

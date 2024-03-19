@@ -1,0 +1,3 @@
+"use strict"; 
+x = 3.14;  
+console.log(x); //It gives error with use strict

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex item: auto or 1</title>
+    <style>
+        .flex {
+            display: flex;
+            border: 2px solid red;
+            background-color: lightgray;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid blue;
+            background-color: lightpink;
+            flex: auto;
+            /* The property is added to the flex*/
+        }
+
+        .box-with-flex-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid blue;
+            background-color: lightpink;
+            flex: 1;
+            /* Instead of auto The property is added to the flex*/
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flex:auto</h1>
+    <div>By Adding to the flex: auto; to the box(not container)</div>
+    <div class="flex">
+        <div class="box">Content is very long</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <p>It is seen the space is equally divided but box contain more text become slightly wider,this automatically
+        implies below</p>
+    <ul>
+        <li>flex-grow: 1</li>
+        <li>flex-shrink: 1</li>
+        <li>flex-basis: auto</li>
+    </ul>
+
+    <section name="Flex with auto">
+        <h1>flex:1</h1>
+        <div>By Adding to the flex: 1; to the box(not container)</div>
+        <p>It is seen the space is equally divided</p>
+        <div class="flex">
+            <div class="box-with-flex-1">Content is very long</div>
+            <div class="box-with-flex-1">2</div>
+            <div class="box-with-flex-1">3</div>
+            <div class="box-with-flex-1">4</div>
+        </div>
+        <ul>
+            <li>flex-grow: 1</li>
+            <li>flex-shrink: 1</li>
+            <li>flex-basis: 0</li>
+        </ul>
+    </section>
+</body>
+
+</html>

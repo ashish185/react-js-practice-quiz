@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- By using defer tag script download parallel with the HTML parsing
+    but loads/Execute  when HTML Parsing is complete.
+    
+    1. HTML parsing
+    2. Script tag encounter, download the js in parallel.
+    3. Once HTML parsing is completed.
+    4. Execute/Load the JS.
+
+    in Async, jab JS parallel load hoti but load HTML parsing k bad hoti h,
+    in Defer, jab JS parallel load hoti, but Execution pehle hota h HTML parsing se.
+    -->
+    <script src="path/to/script1.js" defer></script>
+    <script src="path/to/script2.js" defer></script>    
+    <title>Document</title>
+    <!-- Problem
+    May be Script2 download first and Run before Script1
+    -->
+</head>
+<body>
+    
+</body>
+</html>

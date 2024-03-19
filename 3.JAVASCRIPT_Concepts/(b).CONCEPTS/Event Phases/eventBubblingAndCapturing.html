@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JavaScript (Very) Basics</title>
+  <script src="eventBubbling.js" defer></script>
+  <script src="eventCapturingOrTricklingDown.js" defer></script>
+</head>
+<style>
+  .divClass{
+    padding: 30px;
+    border: 1px solid black;
+    min-width:  100px;
+    min-height: 100px;
+  }
+</style>
+<body>
+   <h2>eventBubbling</h2>
+    <div id="grandparent"class="divClass">
+      Grand Parent
+      <div id="parent" class="divClass">
+        Parent
+        <div id="child" class="divClass">
+          child
+        </div>
+      </div>
+    </div>
+    <h2>eventCapturingOrTricklingDown</h2>
+    <div id="grandparentT"class="divClass">
+      Grand ParentT
+      <div id="parentT" class="divClass">
+        ParentT
+        <div id="childT" class="divClass">
+          childT
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

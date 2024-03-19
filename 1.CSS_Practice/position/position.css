@@ -1,0 +1,57 @@
+/*what is the positon property in css?
+Ans: A position property specifies where the element should be position
+(SFARS)
+1) Static
+2) Fixed
+3) Absolutue
+4) Relative
+5) Sticky
+
+Understanding:Esme hum position krte h elements by giving top,right,bottom,left along with postion value
+For ex:
+agar right corner m position krna ho to
+position:relative
+right:0 ( 0 px away from right)
+bottom:0 (0 px away from bottom)
+Q) Har element like <p>,<div> ye by default left m dikhte h, enki bhi to position hoti hogi
+Ans) Yes, by default they are static.
+------------------------------------
+1) static: HTML elements are positioned static by default.  
+Static positioned elements are not affected by the top, bottom, left, and right properties
+2) fixed: Positon fixed is relative to the view port whereas absolute is relative to the parent.
+Like Humnay TNT page par FOOTER fixed kiya tha na. To usme ye code lga hoga
+3) absolute: Absolute parent se k respect m change krta postion. To use absolute
+Parent element should have relative position
+4) relative: where the element position relativly to the page.
+5) sticky: An element with position: sticky; is positioned based on the user's scroll position.
+Yad: Like agar hum TNT m chchte ki Upar jo error aati h vo fixed rhe ho LOGO bhi dikhta rhe then we can use it
+It does not work on IE or safari
+*/
+.static-class{
+    position: static;
+    top:10px;
+    right:10px;
+    font-size: 2rem;
+}
+.fixed-class {
+    position: fixed;
+    bottom: 0;
+    right:10px;
+    font-size: 2em;
+}
+.relative-class {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+    font-size:  1.5rem;  
+}
+.absolute-class {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+    font-size:  1.5rem;
+}

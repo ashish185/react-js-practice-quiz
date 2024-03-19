@@ -1,0 +1,2 @@
+/* In theory, you should use aria-labelledby if the text is visually on-screen somewhere and this form is preferable. 
+You should only use aria-label when it’s not possible to have the label visible on screen. */

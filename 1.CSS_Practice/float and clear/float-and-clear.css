@@ -1,0 +1,23 @@
+.float-class{
+    float: left;
+    height: 30%;
+    width: 30%;
+}
+.para1{
+    font-size: 3em;
+}
+.para-with-clear{
+    font-size: 3em;
+    clear: left; /* JO left m float h na uske niche aajayega text */
+}
+/* 
+what is float and clear in css?
+The float property is used for positioning and formatting content 
+e.g. let an image float left to the text in a container.
+
+Position and float m diff kya h?
+float: float m element as well as uske sath ka content wrap krte h
+position: hum just positin fixed krte h element ki
+
+
+*/

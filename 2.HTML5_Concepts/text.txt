@@ -1,0 +1,63 @@
+Question: What will happen if the doctype is not specified in an HTML web page?
+Answer:If the doctype is not specified in an HTML web page, then the web browser will be unable to interpret 
+the new HTML5-specific tags.
+
+2)Question: Why do you think the addition of drag-and-drop functionality in HTML5 is important? 
+How will you make an image draggable in HTML5?
+Ans: <img draggable = "true">
+
+3)Question: What is the server-sent events in HTML5?
+Ans)The events that flow from the webserver to the browsers 
+are called server-sent events.
+<eventsource src = "/cgi-bin/myfile.cgi" />
+
+4)Question: Briefly explain various page structure elements in HTML5.
+Answer: Following are the various page structure elements available in HTML5:
+
+<article> - Represents a set of information on a web page
+<aside> - Represents the sidebar of a web page
+<footer> - Represents the footer section of a web page
+<header> - Represents the header section of a web page
+<nav> - Represents the navigational elements of a web page
+<section> - Represents the set of instructions used inside an article block for defining the basic structure of a web page
+
+4)Question: What are the useful API in HTML5?
+Answer: Some of the useful APIs in HTML5 are:
+Canvas API - Enables drawing graphics via J.S. and the <canvas> element.
+Console API - Allows developers to perform various debugging tasks.
+Constraint Validation API - Helps in checking (validating) user-entered values into form controls prior to submitting these values to the server.
+Credential Management API - Enables a website to store and retrieve federated, public, and user key credentials. In other words, it allows users to sign in without entering passwords.
+Drag and Drop API - Allows grabbing and dragging an HTML object with the cursor.
+Geolocation API - Enables users to share their location details with web applications.
+History API - Grants access to the browser navigation history.
+Media API - A JavaScript API that allows interacting with the audio and video elements. Provides the HTMLMediaElement programming interface.
+Service Worker API - Allows:
+Access to push background sync APIs and push notifications.
+Creating effectual offline experiences
+Intercepting network requests and take relevant actions thereof
+Updating assets residing on the server
+WebVTT API - WebVTT stands for Web Video Text Tracks Format. Provides access to the various text tracks available for an HTML5 video using the <track> element.
+Web Storage API - Provides a faster and better mechanism to allows browsers to store key/value pairs.
+
+How to add video tag?
+Ans)<video width = "640" height = "360" controls>
+<source src = "videofile.mp4" type = "video/mp4>
+</video>
+
+Question: Please explain the new form input types in HTML5.
+Answer: The HTML5 introduces the following 14 new form input types:
+
+Color - Select multiple colors using type = "color"
+Date - Pick a date by using type = "date."
+Datetime - Combination of date and time. Pick a date and time by using type = "datetime"
+Datetime-local - Doesn't include the timezone. Pick a date and time by using type = "datetime-local."
+Email - Enter one or more email addresses using type = "email."
+Month - Pick a month by using type = "month."
+Number - Inserts a numerical value with additional attributes like min and max. Enter one or many numerical values using type = "number."
+Search - Allows searching queries by inputting text. Enter one or many search queries by using type = "search."
+Tel - Allows different phone numbers. Each phone number is validated by the client-side. Enter a phone number by using type = "tel."
+Placeholder - Displays a short hint in the input fields before entering a value. Write a short hint in the input field using type = "placeholder."
+Range - Inserts a numerical value within a specific range. Enter a numerical value within a range using type = "range."
+Time - Pick a time by using type = "time."
+Url - URL input type used for the web address. Use one or more attributes using type = "url"
+Week - Pick a week by using type = "week."

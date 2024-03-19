@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Position</title>
+    <style>
+        /* Flexbox in css offers one-dimensional layout model,
+        provides methods that could offer space distribution between items 
+        and powerful alignment capabilities */
+        
+        /* This is childern of div */
+        .flexClassContainer {
+            display: flex;
+            justify-content: center;
+            background-color: green;
+            margin-top: 10px;
+           }
+       .flexClassContainerWithChild {
+            display: flex;
+            background-color: green;
+            margin-top: 10px;
+            height: 50vh;
+            justify-content: center;/* It will horizontally centered it */
+           
+        }
+        .flexClassContainerWithChild > div{
+            padding:5px;
+            border: 1px solid black;
+            background-color: white;
+            margin: 10px;
+            height: 70px; /* YE nhi doge to hright jada badh jayegi */
+            width: 70px;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="flexClassContainer">
+            No element in container
+      </div>
+      <!-- SO this becomes container for element1 and element 2 -->
+      <div class="flexClassContainerWithChild">
+            <div>element 1</div>
+            <div>element 2</div>
+      </div>
+  </body>
+</html>

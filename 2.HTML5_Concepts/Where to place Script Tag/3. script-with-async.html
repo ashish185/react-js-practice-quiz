@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 1. Page load, HTML parsing started.
+         2. It encounters script tag with async tag, it download the script in parallel. HTML parsing continues.
+         3. Once the Script downloaded successfully it stop the parsing and start Executing the script.
+         4. After executing the script,the HTML parsing resumes.
+         Summary:
+         Jab Script Download hojati then HTML parsing stop ho jati h execution k liye.
+    -->
+    <!-- By using async script tag download the script first then Execute paralley to the HTML parsing-->
+    <script src="path/to/script1.js" async></script>
+    <script src="path/to/script2.js" async></script>    
+    <title>Document</title>
+    <!-- Problem
+    May be Script2 download first and Run before Script1
+    -->
+    <!-- Suggestion
+    Some browser do not understand async therefor defer attribute also given as fallback
+    -->
+</head>
+<body>
+    
+</body>
+</html>

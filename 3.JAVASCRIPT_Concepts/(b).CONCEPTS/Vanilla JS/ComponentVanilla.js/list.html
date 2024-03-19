@@ -1,0 +1,34 @@
+<!-- Colouring the alternate node -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>I am item1</li>
+        <li>I am item2</li>
+        <li>I am item3</li>
+        <li>I am item4</li>
+    </ul>
+    <script>
+        /* They give HTMLCollection not Array so ForEach will not work here */
+        const htmlCollection= document.getElementsByTagName('ul').children;
+        const oddHtmlCollection= document.querySelector('li:nth-child(odd)'); //Ye first matching item(node) dega
+        const oddHtmlCollectionAll= document.querySelectorAll('li:nth-child(odd)'); //Ye multiple items that are lis tof nodes
+
+        console.log(oddHtmlCollection); //<li>...</li> it is node
+        console.log(oddHtmlCollectionAll,Array.isArray(oddHtmlCollectionAll)); // NodeList(2) [li,li] false
+
+       for (let index = 0; index < oddHtmlCollectionAll.length; index++) {
+          oddHtmlCollectionAll[index].style.color="red"
+        }
+       /*  x.forEach(element => {
+            document.write(element);    
+        }); */
+    </script>
+</body>
+</html>

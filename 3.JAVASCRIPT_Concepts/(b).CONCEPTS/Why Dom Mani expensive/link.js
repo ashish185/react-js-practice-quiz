@@ -1,0 +1,1 @@
+//https://medium.com/technogise/dom-manipulation-in-browser-59b793bee559#:~:text=Reflows%20are%20very%20expensive%20in,out%20the%20entire%20page%20again.

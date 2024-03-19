@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex grow</title>
+    <style>
+        .flex {
+            display: flex;
+            border: 2px solid red;
+            background-color: lightgray;
+            /* flex-grow: 1; */
+        }
+
+        .box{
+            box-sizing: border-box; /* So that border includes in width */
+            border: 1px solid blue;
+            background-color: lightpink;
+        }
+
+        .box-with-flex-property{
+            flex: 1;
+            box-sizing: border-box; /* So that border includes in width */
+            border: 1px solid blue;
+            background-color: lightpink;
+        }
+
+        .flex-items{
+            box-sizing: border-box; /* So that border includes in width */
+            border: 1px solid blue;
+            background-color: lightpink;
+        }
+        
+        .flex-items:nth-of-type(4){
+            /* flex-grow: 1; */
+            flex-grow: 1;
+        }
+     
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Task: I want to adjust boxes that it can take full width</h3>
+    <section name="Default flex">
+        <div>Default flex: items are not taking exact width of container</div>
+        <div class="flex">
+            <div class="box">Content is very long</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </section>
+    <hr>
+    <section name="Box having flex:1">
+        <h4>Flex:1 divides the boxes equally</h4>
+        <div>Add flex:1 to the box, it divides the items with equal space it automatically means</div>
+        <ul>
+            <li>flex-grow:1</li>
+            <li>flex-shrink:1</li>
+            <li>flex-basis:0</li>
+        </ul>
+        <div class="flex">
+            <div class="box-with-flex-property">Content is very long</div>
+            <div class="box-with-flex-property">2</div>
+            <div class="box-with-flex-property">3</div>
+            <div class="box-with-flex-property">4</div>
+        </div>
+    </section>
+    <section name="with flex grow">
+        <h4>if i want that my last item takes the whole remaining width</h4>
+        <div class="flex">
+            <div class="flex-items">Content is very long</div>
+            <div class="flex-items">2</div>
+            <div class="flex-items">3</div>
+            <div class="flex-items">4</div>
+        </div>
+    </section>
+    <!-- <section name="Flex with auto">
+        <h1>flex:1</h1>
+        <p>By Adding flex-basis:100px to the flex items will take the minimum width as 100px and do not resize.
+        <ul>
+            <li>Flex basis with flex direction: column work as height not width</li>
+            <li>if width is given and flex basis is given then priority goes to flex basis</li>
+            <li>But if max and min width is given and flex basis is given then priority goes max and min width</li>
+        </ul>
+        
+        </p>
+        <div class="flex">
+            <div class="box-with-solution">Content is very long</div>
+            <div class="box-with-solution">2</div>
+            <div class="box-with-solution">3</div>
+            <div class="box-with-solution">4</div>
+        </div>
+        <ul>
+            <li>flex-grow: 1</li>
+            <li>flex-shrink: 1</li>
+            <li>flex-basis: 0</li>
+        </ul>
+    </section> -->
+</body>
+
+</html>
