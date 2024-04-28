@@ -20,7 +20,17 @@ for(let key in d1){
 for in breadth
 for in height */
 ```
+## reduce method normal
+```js
+const numbers = [1, 2, 3, 4, 5];
+ let sum = numbers.reduce(function (accumulator, current,index) {
+    console.log(
+       `accumulator=${accumulator}|current ${current}|index ${index}`
+     );
+     return accumulator + current;
+ });
 
+```
 ## CSS position revision
 absolute: position to it's parent ancestor,
     if absolute does not have position relative then parent is body
@@ -43,5 +53,6 @@ absolute: position to it's parent ancestor,
         console.log("Div clicked!");
     });
 });
-
+## Call, apply, bind
+## New features of React 18
 ## General regex unit testing.

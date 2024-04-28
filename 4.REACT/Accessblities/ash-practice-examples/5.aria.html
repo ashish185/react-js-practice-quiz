@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <section>
+        <h1>aria-label</h1>
+        <button aria-label="Search">
+            <img src="magnifying_glass.png" alt="Search Icon">
+        </button>
+    </section>
+    <section>
+        <h1>aria-labelledby</h1>
+        <label for="name">Enter your name</label>
+        <input type="text" id="name" aria-labelledby="name">
+    </section>
+    <section>
+        <h1>aria-describedby</h1>
+        <label for="name">Enter your name</label>
+        <input type="text" id="name" aria-labelledby="name" aria-describedby="name_limit">
+        <span id="name_limit">Maximum 20 characters</span>
+    </section>
+</head>
+<body>
+
+</body>
+
+</html>

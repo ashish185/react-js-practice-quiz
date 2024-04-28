@@ -1,4 +1,4 @@
-/* what is Scope?
+/** what is Scope?
 Scope determines the accessibility (visibility) of these variables.
 
 (mdn)
@@ -10,3 +10,4 @@ JavaScript has the following kinds of scopes:
 
 In addition, variables declared with let or const can belong to an additional scope:
 4. Block scope: The scope created with a pair of curly braces (a block).
+*/

@@ -13,7 +13,7 @@ it only points to the variable or stores the reference of the variable
 //Uses of Closure 
 1)Currying.
 2)memoize
-3) Data abstraction
+3)Data abstraction
 */
 
 //Ex-1: Without parameters(arguments)
@@ -31,9 +31,9 @@ function Outer() {
 Outer()();//a:10 b:20
 Outer()(); //a:10 b:20
 var innerCall = Outer(); //a:10 b:20 
-//After calling to Outer, var a ka scope to khtam ho gya still we can access vaiable a in inner function.
-//It gets the reference of Innner function.
-//It is beacuase Inner function is closure. It ceases the variable of outer function.
+//After calling to Outer, var a ka scope to khtam ho gya still we can access variable a in inner function.
+//It gets the reference of Inner function.
+//It is because Inner function is closure. It ceases the variable of outer function.
 console.dir(innerCall);
 innerCall(); // a:10 b:20
 innerCall(); // a:11 b:20
@@ -42,10 +42,9 @@ name: "inner"[[Scopes]]:
 >>Scopes[3]
     0: Closure (Outer)
     a: 11 
-// Value of A is updated as  Closure don’t remember the value of the variable 
+*/
 
 //Ex-2: With parameters(arguments)
-
 function Outer1( outerArg ){
     let a=10;
     function inner1(innerArg){

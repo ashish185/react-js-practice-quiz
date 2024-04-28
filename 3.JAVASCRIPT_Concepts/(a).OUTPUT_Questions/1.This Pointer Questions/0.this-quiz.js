@@ -61,14 +61,14 @@ const questions = [
     const obj= {
       x:20,
       y: function(){
-        console.log(this);
+        console.log('1',this);
         function z(){
-          console.log(this);
+          console.log('2',this);
         }
         const arrow= ()=> {
-          console.log(this);
+          console.log('3',this);
           const arrow2=()=> {
-            console.log(this.x);
+            console.log('4', this.x);
           }
           arrow2();
         }
@@ -79,7 +79,8 @@ const questions = [
     obj.y();
     `,
     id: 2.2,
-    correctAnswer: "this of object, window object in non strict mode else undefined, this of object",
+    correctAnswer: "1 -> {x: 20, y: ƒ}, 2 -> window object, 3 -> x: 20, y: ƒ}, 4 -> 20",
+    //correctAnswer: "this of object, window object in non strict mode else undefined, this of object",
     explanation:'this gets substituted with globalThis, thats why window object'
   },
   {
@@ -87,6 +88,7 @@ const questions = [
     const student= {
       name: 'Amit',
       printName: function(){
+        console.log("this", this ===window);
         console.log("Student name", this.name);
         return this.name;
       }
@@ -100,8 +102,10 @@ const questions = [
   {
     question: `
     const student= {
-      name: 'Amit',
-      printName: function(){
+      name: 'Amit ji',
+      printName: ()=>{
+        console.log("this", this);
+        console.log("isThisWindow", this ===window);
         console.log("Student name", this.name);
         return this.name;
       }
@@ -113,7 +117,7 @@ const questions = [
     `,
     id: 4,
     correctAnswer: "Deepak",
-    explanation:'Call over rides this with calling object'
+    explanation:'this: windowObject, isThisWindow: true, Student name: blank'
   },
   {
     question: `
@@ -135,11 +139,13 @@ const questions = [
   },
   {
     question: `
-    // Arrow function inside callback fn
+    // Arrow function inside callback fn  
     const obj={
       a:20,
       x: function(){
+        console.log('isThisWidow1', this===window);
         const y= ()=> {
+          console.log('isThisWidow2', this===window);
           console.log(this)
         }
         y();
