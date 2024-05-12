@@ -7,6 +7,8 @@ import UseEffectExercise2 from './../4.REACT/hooks/useEffect/UseEffectExercise2'
 import UseEffectExercise3 from './../4.REACT/hooks/useEffect/UseEffectExercise3';
 import UseEffectExercise4 from './../4.REACT/hooks/useEffect/UseEffectExercise4';
 import BindingEventIssue from './../4.REACT/binding-event-issue/BindingEventIssue';
+import HocMain from "../4.REACT/1.DesignPatterns/1.hoc/HocMain";
+import TabMain from "../4.REACT/1.DesignPatterns/2.CompoundPattern/TabMain";
 
 const basePath = "react-js-practice-quiz";
 
@@ -30,6 +32,14 @@ const components = [
   {
     path: `${basePath}/BindingEventIssue`,
     element: <BindingEventIssue />,
+  },
+  {
+    path: `${basePath}/HocMain`,
+    element: <HocMain />,
+  },
+  {
+    path: `${basePath}/TabMain`,
+    element: <TabMain />,
   },
 ];
 

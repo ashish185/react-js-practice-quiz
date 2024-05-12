@@ -3,9 +3,9 @@ Ans: A position property specifies where the element should be position
 (SFARS)
 1) Static
 2) Fixed
-3) Absolutue
+3) Absolute
 4) Relative
-5) Sticky
+5) Sticky (Sticky k liye page scrolable bnana pdega
 
 Understanding:Esme hum position krte h elements by giving top,right,bottom,left along with postion value
 For ex:
@@ -40,6 +40,7 @@ It does not work on IE or safari
     font-size: 2em;
 }
 .relative-class {
+    margin-top: 100px;
     position: relative;
     width: 400px;
     height: 200px;
@@ -54,4 +55,12 @@ It does not work on IE or safari
     height: 100px;
     border: 3px solid #73AD21;
     font-size:  1.5rem;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
 }

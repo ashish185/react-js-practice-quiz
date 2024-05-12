@@ -1,0 +1,13 @@
+.comp1 {
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid blueviolet;
+}
+
+.comp2 {
+    width: 300px;
+    height: 100px;
+      box-sizing: content-box;
+    border: 2px solid blueviolet;
+}

@@ -4,3 +4,4 @@ in a web browser and it stores data with no expiration date. localStorage can on
 and HTML5.
 Session storage and cookies
  */
+ 

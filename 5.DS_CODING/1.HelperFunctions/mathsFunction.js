@@ -1,6 +1,8 @@
 const x=01;
 console.log(x); //1
 
+Number.MIN_VALUE 
+
 //How to a number is negative?
 let isNegative = x<0;
 

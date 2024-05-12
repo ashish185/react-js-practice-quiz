@@ -17,7 +17,7 @@ function Employee(firstName, salary, department){
     this.department = department
 }
 
-// here proptotype is being used with constructor
+// here prototype is being used with constructor
 Employee.prototype.getFirstName = function () {
     return `First name: ${this.firstName}`
 }

@@ -1,6 +1,6 @@
 
 console.log("_________Chaining after a catch________________________");
-//Ex:1
+//Ex:1 Consuming a promise
 new Promise((resolve, reject) => {
     resolve('Then arguments learning');
 })

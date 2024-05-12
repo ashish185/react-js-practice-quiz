@@ -79,3 +79,4 @@ const ans = multiLevelFlatten(arr3, [], 3);
 console.log('multiLevelFlatten', ans);
 console.log('By using flat', arr3.flat()); // [ 5, 4, [ 5, 6 ], 1, 2, 3, 4 ]
 console.log('By using flat with depth 2', arr3.flat(2)); //[ 5, 4, 5, 6 , 1, 2, 3, 4 ]
+const x = [[1, 2], [[3]], 4];

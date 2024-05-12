@@ -1,11 +1,3 @@
-/*
- Synchronous JavaScript: i.e. every statement of the code gets executed one by one.
-  So, basically a statement has to wait for the earlier statement to get executed. 
-
-  Asynchronous JavaScript: Asynchronous code allows the program to be executed
-   immediately where the synchronous
-   code will block further execution of the remaining code until it finishes the current one.
-*/
 console.log("----------------------Promises in JS-----------------------");
 /* 
 MDN:

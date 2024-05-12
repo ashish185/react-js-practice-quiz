@@ -6,6 +6,9 @@ const obj={
     prop4: undefined
 }
 
+/* Emse ye khyal rkhna pdega ki recursive k end m aane k bad
+AGAR VO OJECT THAT THO OBJECT M JAYE WRNA 
+*/
 function deepClone(obj){
     let clone = (obj instanceof Array ? [] : {});
     for (const key in obj) {

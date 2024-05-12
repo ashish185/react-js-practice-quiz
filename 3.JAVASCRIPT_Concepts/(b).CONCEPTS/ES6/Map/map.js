@@ -50,3 +50,5 @@ const wm = new WeakMap();
 const objBlank={};
 wm.set(objBlank,1);
 console.log(wm.get(1)); //1
+
+const x= new Map();

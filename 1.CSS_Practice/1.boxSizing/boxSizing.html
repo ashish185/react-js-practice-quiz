@@ -1,0 +1,35 @@
+<!-- 
+By default if you do not provide box sizing, then width of container is width + border
+To include border in width else
+    -box-sizing: border-box
+    -box-sizing: content-box
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .comp1 {
+            width: 200px;
+            height: 100px;
+            box-sizing: border-box;
+            border: 2px solid blueviolet;
+        }
+
+        .comp2 {
+            width: 300px;
+            height: 100px;
+            box-sizing: content-box;
+            border: 2px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="comp1">Border Box: Total width is including with border</div>
+    <div class="comp2">Content Box: Total width + border width</div>
+</body>
+
+</html>

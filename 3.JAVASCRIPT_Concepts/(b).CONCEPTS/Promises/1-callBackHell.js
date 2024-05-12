@@ -1,28 +1,53 @@
-const trackMe = document.getElementById("trackMe");
-trackMe.addEventListener("click", trackUserLocation);
-
-function successCallBack(success) {
-  return setTimeout(console.log("Success", success), 2000);
-}
-const errorCallBack = (error) => {
-  console.log("Error", error);
-};
-
-function trackUserLocation() {
-  navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
-}
-
-/*
-getCurrentPosition(callbackSuccess1, callbackError 
-)
-Now In callbackSuccess1  we are using another function that is setTimeout 
-which is having another callback function i.e console.log() this is called
-CallBack Hell
-
-Definition: When callbacks are nested into another callback.
-
-Problem: It is cumbersome to read callbacks
-
-Solution: Promises
-
+/* 
+  Suppose I want a program which will call asyncFunction1 after 1 second and
+  after it's successful response it will call asyncFunction2 and then asyncFunction3
 */
+
+const asyncFunction1 = ((error, result1) => {
+  if (error) {
+    console.error(error);
+  } else {
+    asyncFunction2(result1, (error, result2) => {
+      if (error) {
+        console.error(error);
+      } else {
+        asyncFunction3(result2, (error, result3) => {
+          if (error) {
+            console.error(error);
+          } else {
+            // More nested callbacks...
+          }
+        });
+      }
+    });
+  }
+});
+
+function asyncFunction() {
+  return new Promise(() => {
+    // Asynchronous operation
+    setTimeout(() => {
+      asyncFunction1('Data');
+    }, 1000);
+  });
+}
+asyncFunction();
+
+
+/* Promise resolution */
+asyncFunction
+.then(res => asyncFunction1)
+.then(res => asyncFunction2)
+
+
+async function fetchMultipleData() {
+  try {
+    const [data1, data2] = await Promise.all([
+      asyncFunction1(),
+      asyncFunction2()
+    ]);
+    console.log(data1, data2);
+  } catch (error) {
+    console.error(error);
+  }
+}
