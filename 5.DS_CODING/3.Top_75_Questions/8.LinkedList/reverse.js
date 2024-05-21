@@ -1,3 +1,5 @@
+
+// https://leetcode.com/problems/reverse-linked-list/
 const LinkedList = require('./LinkedList');
 let l1= new LinkedList();
 l1.add(1);
@@ -13,19 +15,22 @@ function display(head){
          current=current.next;
      }
  }
-function reverse(start){
-    let curr, prev,next;
-    curr=start;
-    prev=null;
-    next=null;
-
-    while(curr!==null){
-        next=curr.next;
-        curr.next=prev;
-        prev=curr;
-        curr=next;
+ var reverse = function(head) {
+    if(!head || !head.next){
+        return head;
     }
-    return prev;
-}
+    let prev=head;
+    let current= head.next;
+    let next= current.next;
+    while(current!==null){
+        next = current.next;
+        current.next= prev;
+        prev=current;
+        current=next;
+    }
+    head.next=null;
+    head= prev;
+    return head;
+};
 const addr=reverse(l1.head);
 display(addr);

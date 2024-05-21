@@ -1,4 +1,4 @@
-/* 1: Throttling(frqu): Changes based on a time based frequency. (Button click repteadly) 
+/* 1: Throttling(frequency): Changes based on a time based frequency. (Button click repeatedly) 
 For example, it can be used using _.throttle lodash function
 2: Debouncing(inactivity): Publish changes after a period of inactivity.
  For example, it can be used using _.debounce lodash function

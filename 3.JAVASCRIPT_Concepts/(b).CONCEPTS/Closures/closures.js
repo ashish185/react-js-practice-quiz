@@ -95,11 +95,12 @@ for (let z = 0; z < 3; z++) {
 SetTimout z value with let 1
 SetTimout z value with let 2 */
 for (var p = 0; p< 3; p++) {
-    setTimeout(function(local_p) {
-      return function(){ console.log("Event with var it is giving result",local_p);}
-    }(p) //THis is IIFY
+  const func = function (local_p) {
+    return function () { console.log("Event with var it is giving result", local_p); }
+  }(p)
+  setTimeout(func //THis is IIFY
     , 1000);
-  }
+}
 /* Event with var it is giving result 0
 Event with var it is giving result 1
 Event with var it is giving result 2

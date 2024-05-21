@@ -62,10 +62,29 @@ Relationships
 10. Combinator?
 Ans) A combinator is something that explains the relationship between the selectors.
 <div>
-    <p>Para1 <p>sub para1</p> <p>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
 </div>
-<p>Para2</p>
-<p>Para3</p>
+
+```css
+div>p {
+  background-color: yellow; /* Direct children of div */
+}
+/* 
+Paragraph 1 in the div.
+Paragraph 2 in the div.
+*/
+
+div p { 
+  background-color: yellow; /* all the elements inside div */
+}
+/* 
+Paragraph 1 in the div.
+Paragraph 2 in the div.
+Paragraph 3 in the div.
+*/
+```
 
 therefore:
 Child of div:Para1 -> div>p (Child selector)

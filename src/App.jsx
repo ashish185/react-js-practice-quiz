@@ -9,10 +9,16 @@ import UseEffectExercise4 from './../4.REACT/hooks/useEffect/UseEffectExercise4'
 import BindingEventIssue from './../4.REACT/binding-event-issue/BindingEventIssue';
 import HocMain from "../4.REACT/1.DesignPatterns/1.hoc/HocMain";
 import TabMain from "../4.REACT/1.DesignPatterns/2.CompoundPattern/TabMain";
+import SearchUi from "../4.REACT/1.MACHINE_CODING/searchUI/SearchUi";
+import BasicForm from "../4.REACT/1.MACHINE_CODING/basicForm/BasicForm";
 
 const basePath = "react-js-practice-quiz";
 
 const components = [
+  {
+    path: `${basePath}/SearchUi`,
+    element: <SearchUi/>,
+  },
   {
     path: `${basePath}/UseEffectExercise1`,
     element: <UseEffectExercise1 />,
@@ -40,6 +46,10 @@ const components = [
   {
     path: `${basePath}/TabMain`,
     element: <TabMain />,
+  },
+  {
+    path: `${basePath}/BasicForm`,
+    element: <BasicForm />,
   },
 ];
 
@@ -72,7 +82,8 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    // <RouterProvider router={router} />
+    <BasicForm/>
   );
 }
 

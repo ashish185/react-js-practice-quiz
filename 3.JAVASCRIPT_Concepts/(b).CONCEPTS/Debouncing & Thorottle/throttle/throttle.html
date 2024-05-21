@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-   <body>
-    <button id="but" onclick="myFunc()">
-        Click 
-    </button>
-      <script>
-         const api=()=>{
+
+<body>
+   <button id="but" onclick="myFunc()">
+      Click
+   </button>
+   <script>
+      const api = () => {
          console.log("Hi");
+      }
+      const throttle = (cb) => {
+         let flag = true;
+         return function () {
+            if (flag) {
+               flag = false;
+               cb();
+               setTimeout(() => {
+                  flag = true;
+               }, 3000);
+            }
          }
-         const throttle = (cb) =>{
-         let flag=true;
-         return function(){
-         if(flag){
-         flag=false;
-         cb();
-         setTimeout(()=>{
-         flag=true;
-         },3000);
-         }
-         }
-         }
-         const myFunc=throttle(api);
-      </script>
-   </body>
+      }
+      const myFunc = throttle(api);
+   </script>
+</body>
+
 </html>

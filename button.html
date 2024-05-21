@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="increment">Increment</button>
+    <div class="count">0</div>
+    <div class="debounceCount">0</div>
+    <div class="throttleCount">0</div>
+    <script>
+        let btnClick = false;
+        let id;
+        let count=0;
+        let throttleCount=0;
+        const debounceFn = () => {
+            clearTimeout(id);
+            id = setTimeout(() => {
+                const countText = document.querySelector('.debounceCount');
+                count = count + 1;
+                countText.textContent = count;
+                console.log('debounce');
+                btnClick = false;
+            }, 1000);
+        }
+
+        const myThrottle = (cb, timeout) => {
+                let flag = true;
+                return function (...args) {
+                    if (flag) {
+                        flag = false;
+                        setTimeout(() => {
+                            flag = true;
+                            cb(...args)
+                        }, timeout)
+                    }
+                }
+            }
+
+        const throttleFn = (time = 1000) => {
+            let now= new Date().getTime();
+
+            setTimeout(() => {
+                const throttleCountText = document.querySelector('.throttleCount');
+                count = count + 1;
+                throttleCountText.textContent = count;
+                console.log('debounce');
+                btnClick = false;
+            }, 1000);
+        }
+            const toUpdate = () => {
+                const throttleCountText = document.querySelector('.throttleCount');
+                throttleCount = throttleCount + 1;
+                throttleCountText.textContent = throttleCount;
+                console.log('debounce');
+            }
+        const incBtn = document.querySelector('.increment');
+        const throttleCountText = document.querySelector('.throttleCount');
+            incBtn.addEventListener('click', () => {
+                debounceFn();
+                const fn = myThrottle(toUpdate, 1000)();
+            })
+    </script>
+</body>
+
+</html>

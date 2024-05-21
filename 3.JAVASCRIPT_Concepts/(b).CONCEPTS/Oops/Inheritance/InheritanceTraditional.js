@@ -28,15 +28,14 @@ So two objects of Employee forms
 1) Employee
 2) Employee.prototype pointed by Employee prototype property 
 
-finacae emp1 has __proto__ pointing to the Employee.prototype
+financeEmp1 has __proto__ pointing to the Employee.prototype
  */
-console.log('Finance employee', financeEmp1); //Finance employee Employee 
-/* { firstName: 'Praveen', salary: 50000, department: 'Finance' } */
+console.log('Finance employee', financeEmp1); 
+/*Output: { firstName: 'Praveen', salary: 50000, department: 'Finance' } */
 
 console.log('First name',financeEmp1.firstName); //Praveen
-/* 
-finaceEmp1 will look for firstName in own it. It will get & print it
-*/
+// Explanation:  financeEmp1 will look for firstName in own it. It will get & print it
+
 
 console.log('First name',financeEmp1.getFirstName()); 
 //First name First name: Praveen
@@ -69,8 +68,11 @@ console.log(pgObj.firstName); //Mukul
 console.log(pgObj.salary); //50000
 console.log(pgObj.department); //CSE
 console.log(pgObj.pl); //C
+
+/* *********PROBLEM: cannot access prototype method */
 /* console.log(pgObj.getFirstName());  *///TypeError: pgObj.getFirstName is not a function
 
+console.log('____________________________________Solution_____________________________________________')
 function Programmer2(firstName, salary, department, pl){
     Employee.call(this, firstName, salary, department); //It calls the constructor of Employee
     //Generally obj1.methodName.call((obj2)

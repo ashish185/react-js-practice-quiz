@@ -9,10 +9,10 @@ function Cuboid(){
 Cuboid.prototype.height = 10;
 
 const d1 = new Cuboid();
-//"Object.keys does not include prototypes keys"
+//Object.keys does not include prototypes keys
 console.log(Object.keys(d1)); //[ 'length', 'breadth' ]
 
-//Whereas for in involves protoype keys
+//Whereas for in involves prototype keys
 for(let key in d1){
     console.log("for in", key);
 }
@@ -23,11 +23,10 @@ for in height */
 ## reduce method normal
 ```js
 /* To Reduce number array to sum of it's value */
+// agar reduce method m koi initializer nhi diya to, acc set to first value of array and current will be    point to second and index is 1
 const numbers = [1, 2, 3, 4, 5];
  let sum = numbers.reduce(function (accumulator, current,index) {
-    console.log(
-       `accumulator=${accumulator}|current ${current}|index ${index}`
-     );
+    console.log( `accumulator=${accumulator}|current ${current}|index ${index}`);
      return accumulator + current;
  });
 
@@ -59,8 +58,13 @@ getAttribute, removeAttribute
     });
 });
 ## splice vs slice
+- Splice: Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements
+- array.splice(start, deleteCount, item1, item2, ..., itemN);
+    item1, item2, ..., itemN (optional): These are the new elements (zero or more) to insert at the start index. 
     const arr=[1,2,3,4];
-    splice(0,2): 0 index se  items remove kardo, [2,3,4], splice(1)
+    splice(0,2): return [1,2],original arr becomes [3,4]
+    splice(1): Remove all the items from index 1, it returns [2,3,4] and original arr becomes [1]
+- array.slice(start, end:exclusive)
     slice(0,2): [0, n-1] tak ki item de do [1] like substring slice(1   )
 
 ## Programmer2.prototype = Object.create(Employee.prototype); Object.create() yad rehna chiye
@@ -78,7 +82,7 @@ getAttribute, removeAttribute
 ## Phases of Browser: Dom creation(html parsing) -> CSSOM creation -> Render Tree (CSSOM+ DOM) -> Layout -> Paint
 ## async vs defer
 ## Promise ka resolve reject setTimeout catch finally code write
-## bind ka polyfill so that polyfill likhne ki practice ho jaye
+## bind ka polyfill: Internal it is uses apply so that polyfill likhne ki practice ho jaye
 
 ## mp.set('key',value) mp.has('key) //
 ## for(const el in arr){ }, in means index
@@ -90,12 +94,18 @@ getAttribute, removeAttribute
 ## React custom hooks can be useOnline(), useToggleSwitch
 ## Basic form bna lo with input type radio and all.
 ## Flatten the array, deep cloning. multiLevelFlatten(arr3, [], 3);  
+## memoize args caching
+```js
+console.log([1,2 ,3].toString()); //'1,2,3'
+console.log(JSON.stringify([1,2 ,3])); //[1,2,3]
+```
 
 ## Object
 Object.createProperty(anyObject,   name: {   value: 'John Doe',writable: true,enumerable: true,configurable:true });
 Object.defineProperty(anyObject,"name",{writable:false});
 
 ## Iterate set like this or 
+set.add(1);
 set.forEach();
 for (let i = 2; i <= set.size + 1; i++) {
         if (!set.has(i)) {
@@ -119,3 +129,9 @@ function printCoord(obj: PointType) {
 type PointType={
    z:1
 }
+
+## HTML FORM Tags
+<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+<input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+<input type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30"   min="2018-06-07T00:00" max="2018-06-14T00:00" />
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />

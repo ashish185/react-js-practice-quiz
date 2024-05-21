@@ -20,6 +20,25 @@ node4.next = node5;
 let slowPointer= start;
 
 
+var hasCycle = function(head) {
+  if(!head){
+      return false;
+  }
+  let turtle=head;
+  let hare= head;
+  let res;
+  let i=0;
+  while(hare.next !==null && hare!==null){
+      hare.next= hare.next.next;
+      turtle.next= turtle.next;
+      if(hare.next === turtle.next){
+          res=hare.next;
+          return true;
+      }
+  }
+  return false;
+};
+
 //10->20->30->40->50->60->70
 /* 
   10->20->30->40->50->60->70->10
