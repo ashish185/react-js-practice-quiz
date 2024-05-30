@@ -45,11 +45,11 @@ getAttribute, removeAttribute
     - document.querySelectorAll("div");
     - document.querySelectorAll("#id"); - document.querySelectorAll(".className");
     - document.querySelectorAll("ul li"); // Select all <li> elements within <ul> elements
+    - - document.querySelectorAll("ul>li"); // Select all <li> under <ul> elements but don't include elements inside li
     - document.querySelectorAll(".aClass, .bClass"); / Select all elements with class "aClass" or "bClass"
     - document.querySelectorAll("tr:nth-child(even)");
 - Analogy
-    document.querySelectorAll("ul li");// it gives li under ul
-    Selector div p : mean all <p> inside div
+    document.querySelectorAll("ul li");// All li children inside ul, even the li has sub child
 - Iterate
   list.forEach(div => {
     div.addEventListener("click", event => {
@@ -61,9 +61,11 @@ getAttribute, removeAttribute
 - Splice: Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements
 - array.splice(start, deleteCount, item1, item2, ..., itemN);
     item1, item2, ..., itemN (optional): These are the new elements (zero or more) to insert at the start index. 
+    ```js
     const arr=[1,2,3,4];
-    splice(0,2): return [1,2],original arr becomes [3,4]
-    splice(1): Remove all the items from index 1, it returns [2,3,4] and original arr becomes [1]
+    splice(0,2): // return [1,2],original arr becomes [3,4]
+    splice(1): // Remove all the items from index 1, it returns [2,3,4] and original arr becomes [1]
+    ```
 - array.slice(start, end:exclusive)
     slice(0,2): [0, n-1] tak ki item de do [1] like substring slice(1   )
 
@@ -83,8 +85,26 @@ getAttribute, removeAttribute
 ## async vs defer
 ## Promise ka resolve reject setTimeout catch finally code write
 ## bind ka polyfill: Internal it is uses apply so that polyfill likhne ki practice ho jaye
+## Map
+```js
+mp.set('key',value) mp.has('key) map.get(key)//
+//1. size is not a function of Map, it's property of map just like length
+mp.size() //Incorrect
+mp.size //Correct
+mp.keys()
+//How to iterate map
+// How to get the fist value of Map using next().value
+mp.keys().next().value => first key
 
-## mp.set('key',value) mp.has('key) //
+for (const [key, value] of map) {
+  console.log(`Key: ${key}, Value: ${value}`);
+}
+
+for (const key of map.keys()) {
+  const value = map.get(key);
+  console.log(`Key: ${key}, Value: ${value}`);
+}
+```
 ## for(const el in arr){ }, in means index
 ## for(const el of arr){ }, in means value, here break and continue works.
 ## for(let x=0; x>20, x++){ }, tradition for lop
@@ -107,11 +127,15 @@ Object.defineProperty(anyObject,"name",{writable:false});
 ## Iterate set like this or 
 set.add(1);
 set.forEach();
+for(const val of set.values()){
+
+}
 for (let i = 2; i <= set.size + 1; i++) {
         if (!set.has(i)) {
             return i;
         }
 }
+const arr=[...set];
 
 ## typescript type vs interface
 1. type cannot be implement via classes,
@@ -120,7 +144,7 @@ type PointType={
    x: number;
    y: number;
 }
-
+```js
 function printCoord(obj: PointType) {
   console.log("The coordinate's x value is " + obj.x);
   console.log("The coordinate's y value is " + obj.y);
@@ -129,9 +153,25 @@ function printCoord(obj: PointType) {
 type PointType={
    z:1
 }
+``
+3.  const onAddClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const target = event.target as HTMLButtonElement;
+}
+```
 
 ## HTML FORM Tags
 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
 <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
 <input type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30"   min="2018-06-07T00:00" max="2018-06-14T00:00" />
 <input type="email" id="email" pattern=".+@example\.com" size="30" required />
+
+## Infinite function currying
+```js
+const sumInfinite = (a) => {
+  return (b) => {
+    return b ? sumInfinite(a + b) : a;
+  }
+}
+
+console.log(sumInfinite(2)(5)(3)());
+```

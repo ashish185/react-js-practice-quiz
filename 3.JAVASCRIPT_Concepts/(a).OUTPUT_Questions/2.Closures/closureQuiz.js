@@ -15,6 +15,7 @@ const closuresQuestions = [
       }
       return inner1;
     }
+    Outer1(1)(2)
     `,
     id: 1,
     correctAnswer: "window object or global",

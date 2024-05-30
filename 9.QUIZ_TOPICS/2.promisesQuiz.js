@@ -1,20 +1,3 @@
-var p = new Promise(function (resolve) {
-  // resolve("OK");
-  return "OK";
-});
-console.log('p', p);
-
-var p2 = p.then(function(data) {
-  return data;
-});
-console.log('p2', p2);
-
-var p3 = p2.then(function(data) {
-  console.log('Data in p3', data);
-  return data + " Bye";
-});
-console.log('p3', p3);
-
 const promisesMcq = [
   {
     question: `

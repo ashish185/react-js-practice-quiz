@@ -64,6 +64,7 @@ setTimeout(() => {
     console.log('Execute immediately.');
 }, 0);
 
+Promise.resolve('Promise').then(el => console.log(el));
 console.log('Bye!');
 /* Hi!
 Bye!
@@ -91,31 +92,8 @@ setTimeout return some id
         -> Once the timer is completed, it pushed the callback function in event loop
 ->eventLoop:
     microTaskQueue:
-    
-
-
-  
-
-
-
-
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function handleButtonClicked () {

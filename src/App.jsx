@@ -11,13 +11,53 @@ import HocMain from "../4.REACT/1.DesignPatterns/1.hoc/HocMain";
 import TabMain from "../4.REACT/1.DesignPatterns/2.CompoundPattern/TabMain";
 import SearchUi from "../4.REACT/1.MACHINE_CODING/searchUI/SearchUi";
 import BasicForm from "../4.REACT/1.MACHINE_CODING/basicForm/BasicForm";
+import CustomHookMain from "../4.REACT/hooks/customHooks/CustomHookMain";
+import UseEffectCounterProblem from "../4.REACT/UseEffectCounterProblem/UseEffectCounterProblem";
+import CallbackRunAtParticularTime from "../4.REACT/UseEffectCounterProblem/CallbackRunAtParticularTime";
+import UseUpdateEffectMain from "../4.REACT/hooks/customHooks/useUpdateEfffect/UseUpdateEffectMain";
+import UseOnceMain from "../4.REACT/hooks/customHooks/useOnce/UseOnceMain";
+import DebounceMain from "../4.REACT/hooks/customHooks/useDebounce/DebounceMain";
+import Practice from "../4.REACT/Practice";
+import ReactMemoMain from "../4.REACT/components/ReactApi/ReactMemoMain";
 
 const basePath = "react-js-practice-quiz";
 
 const components = [
   {
+    path: `${basePath}/Practice`,
+    element: <Practice />,
+  },
+  {
+    path: `${basePath}/ReactMemoMain`,
+    element: <ReactMemoMain />,
+  },
+  {
+    path: `${basePath}/DebounceMain`,
+    element: <DebounceMain />,
+  },
+  {
+    path: `${basePath}/UseOnceMain`,
+    element: <UseOnceMain />,
+  },
+  {
+    path: `${basePath}/UseUpdateEffectMain`,
+    element: <UseUpdateEffectMain />,
+  },
+  // {
+  //   path: `${basePath}/CallbackRunAtParticularTime`,
+  //   element: <CallbackRunAtParticularTime />,
+  // },
+  {
+    path: `${basePath}/UseEffectCounterProblem`,
+    element: <UseEffectCounterProblem />,
+  },
+  {
+    path: `${basePath}/CustomHookMain`,
+    element: <CustomHookMain />,
+  },
+  {
     path: `${basePath}/SearchUi`,
-    element: <SearchUi/>,
+    element: <SearchUi />,
   },
   {
     path: `${basePath}/UseEffectExercise1`,
@@ -81,10 +121,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (
-    // <RouterProvider router={router} />
-    <BasicForm/>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

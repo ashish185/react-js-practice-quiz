@@ -4,7 +4,7 @@ const myDebounce = (cb, timeout) => {
     if(timer){
       clearTimeout(timer);
     }
-    setTimeout(() => cb(...args), timeout)
+    timer = setTimeout(() => cb(...args), timeout)
   }
 };
 

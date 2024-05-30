@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Learning Event bubbling
+    </title>
+</head>
+
+<body>
+    By Default the event Bubbling is true
+    <div class="first">
+        <form class="second">
+            Form
+            <button class="third" onclick="">
+                Button
+            </button>
+        </form>
+    </div>
+    <script>
+        document.querySelector('.first').addEventListener('click', function () { alert('div') });
+        document.querySelector('.second').addEventListener('click', function () { alert('form')});
+        document.querySelector('.third').addEventListener('click', function () { alert('button')});
+    </script>
+</body>
+
+</html>

@@ -2,6 +2,7 @@
 Promise.all
 1.Jab sare resolve ho jayenge tbhi hi response aayega
 2.If one rejects then all rejects
+3.Order of promise remains the same.
 */
 
 /* Case1: All settled: Promise will settle: Promise will settle */

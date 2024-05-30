@@ -19,10 +19,13 @@ Promise.all([Promise.resolve('1'), Promise.reject('2ndReject')])
 
 function myPromiseAll(promisesArr) {
 	let response = [];
+	if(!promisesArr.length){
+		return promisesArr;
+	}
 	return new Promise((resolve, reject) => {
 		promisesArr.forEach((prms, index) => prms
 			.then(res => {
-				response.push(res)
+				response[index] = res;
 				//*** Agar sare promise resolve ho gye tbhi success result aayega
 				if (index === promisesArr.length - 1) {
 					resolve(response);

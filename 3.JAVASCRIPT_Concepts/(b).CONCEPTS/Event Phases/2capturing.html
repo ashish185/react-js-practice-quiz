@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Event Capturing
+    </title>
+</head>
+
+<body>
+    <div class="first">
+        Div
+        <form class="second">
+            Form
+            <button class="third" onclick="">
+                Button
+            </button>
+        </form>
+    </div>
+    <script>
+        document.querySelector('.first').addEventListener('click', function () { alert('div') }, { capture: true });
+        document.querySelector('.second').addEventListener('click', function () { alert('form')}, { capture: false });
+        document.querySelector('.third').addEventListener('click', function () { alert('button')}, { capture: false });
+    </script>
+</body>
+
+</html>

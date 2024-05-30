@@ -22,6 +22,7 @@ const functionTakesTime = (num1, num2) => {
 console.time();
 console.log(functionTakesTime(20, 40));
 console.timeEnd();
+
 //Problem, So the function can take time with each of it's function call
 console.time();
 console.log(functionTakesTime(20, 40));

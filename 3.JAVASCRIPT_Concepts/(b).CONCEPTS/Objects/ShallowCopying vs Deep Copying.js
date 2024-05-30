@@ -1,6 +1,8 @@
 /* Shallow Copying vs Deep Copying
 A deep copying means that value of the new variable is disconnected from the original variable 
 while a shallow copy means that some values are still connected to the original variable
+
+A shallow copy means that certain (sub-)values are still connected to the original variable.
 */
 // There are 3 ways to clone a object in Javascript
 /* 
@@ -14,36 +16,53 @@ student.name = 'Arpit';
 
 const copyStudent = student;
 copyStudent.name = 'Arpit Khurana';
-console.log("Orginal object", student);
+console.log("Original object", student);
 console.log('Copy object', copyStudent);
-// If orginal object changes it wil change copied object and vice versa
-/* Orginal Student { name: 'Arpit Khurana' }
+// If original object changes it wil change copied object and vice versa
+/* Original Student { name: 'Arpit Khurana' }
 Copy object { name: 'Arpit Khurana' } */
 
 console.log("___________________Using Object.assign______________");
+// Task: Check if we use Object assign, and if we change in copies whether it changes the original object or not?
 const student1 = {
     name: 'Ashish' //not a nested object
 }
 
 const copyStudent1 = Object.assign({}, student1);
 student1.name = 'Ashish Singhal';
-console.log("Orginal object", student1);
+console.log("Original object", student1); //Original object changed, though it is assigned to new object
 console.log('Copy object', copyStudent1);
 /* 
-Orginal object { name: 'Ashish Singhal' }
+Original object { name: 'Ashish Singhal' }
 Copy object { name: 'Ashish' }
  */
-//HERE IF ORGINAL OBJECTS CHANGE IT DOES NOT IMPACT OTHER OBJECT
+//Conclusion: HERE IF ORGINAL OBJECTS CHANGE IT DOES NOT IMPACT OTHER OBJECT
 console.log("___________________Using spread operator______________");
 
-//Object is changed
-/* 
-Copyied object with spread operator 
-{ 
+const originalObj={ 
   name: 'Bhavya',
   details: { rollNo: 121486, subjects: [ 'Maths', 'Ds' ] }
-}
-*/
+};
+
+//Does original object changes?
+const newObj={ ...originalObj};
+newObj.name='Ashish';
+
+// It does not change the original since it is not the nested key
+console.log(originalObj); //{name: "Ashish", details: {...}}
+console.log(newObj); // {name: "Bhavya", details: {...}}
+
+const newObj2={ ...originalObj};
+
+newObj2.details.rollNo= 1214185;
+
+//Does original object changes?
+console.log(originalObj); //{ name: 'Bhavya', rollNo: 121485, subjects: [ 'Maths', 'Ds' ] }
+console.log(newObj2);  
+// It does change the original even we change the new object roll number
+// Because roll number is nested, and spread operator does shallow copying.
+
+
 console.log("Copyied object with Object assign", copyStudent3WithAssign);
 /* 
 Copyied object with Object assign 
@@ -78,7 +97,7 @@ console.log(JSON.stringify({ key: Infinity })); //{"key":null}
 const withDate = { date: new Date()};
 console.log("Type of date:", typeof(withDate));
 
-console.log("Initial",withDate); //{ date: 2020-11-27T17:05:17.947Z }-.0
+console.log("Initial", withDate); //{ date: 2020-11-27T17:05:17.947Z }-.0
 
 const objAfterCloneWithJSon =JSON.parse(JSON.stringify(withDate)); 
 console.log(objAfterCloneWithJSon);//{ date: '2020-11-27T17:05:17.947Z' } //So the type of date is changed from object to String //

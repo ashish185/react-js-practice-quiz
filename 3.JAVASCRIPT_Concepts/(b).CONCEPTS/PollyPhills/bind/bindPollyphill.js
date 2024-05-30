@@ -16,8 +16,8 @@ Function.prototype.myBind = function (...args){
     //pehla argument obj hoga
     const secondArg = args.slice(1); // Bansal1
     const thisObj = this; //******Caution: agr inner function k andar this de dega na to closure nhi bnega. Hence this becomes undefined
-    return function(funcArgs){
-        const arr=[...secondArg,funcArgs]; //**********funct args last m rehna chiye */
+    return function (funcArgs) {
+        const arr = [...secondArg, funcArgs]; //**********funct args last m rehna chiye */
         //this.apply(args[0],arr); ye tum try kroge na error dega because this lost ho gya hoga
         thisObj.apply(args[0], arr);
     }

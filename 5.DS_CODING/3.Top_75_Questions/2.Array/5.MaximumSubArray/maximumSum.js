@@ -15,12 +15,12 @@ const maximumSubArr = (nums) => {
   let sum = 0;
   let arr = [];
   let max = nums[0];
-  let ans =nums[0];
+  let ans = nums[0];
   let track = {
     startIndx: 0,
     endIndx: 0
   };
-  for(let i =0 ; i<nums.length; i++){
+  for (let i = 0; i < nums.length; i++) {
     for (let j = i; j < nums.length; j++) {
       sum = sum + nums[j];
       if (sum > max) {
@@ -29,7 +29,7 @@ const maximumSubArr = (nums) => {
         track.endIndx = j;
       }
     }
-    sum=0;
+    sum = 0;
     if (max > ans) {
       ans = max;
     }
@@ -41,3 +41,16 @@ console.log(maximumSubArr(nums1)); // [4,-1,2,1]
 // console.log(maximumSubArr([1]));
 // console.log(maximumSubArr([5,4,-1,7,8]));
 // console.log(maximumSubArr([-1]));
+
+/* Easy solution */
+const maxSum = (arr) => {
+  let res = 0;
+  const n = arr.length;
+  for (let i = 0; i < n; i++) {
+    let cur = 0;
+    for (let j = i; j < n; j++) {
+      cur = cur + arr[j];
+      res = Math.max(res, cur);
+    }
+  }
+}
