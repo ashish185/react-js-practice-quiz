@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const UseEffectExercise4 = () => {
+const AbortControllerMain = () => {
   return <Link to="/posts">Go to Posts</Link>;
 };
 
-export default UseEffectExercise4;
+export default AbortControllerMain;
