@@ -80,6 +80,10 @@ function Programmer2(firstName, salary, department, pl){
 }
 
 //Inherits the Employee prototype
+/* 
+object.create() method is used to create a new object with the specified prototype 
+object and properties. Object.create() method returns a new object with the specified prototype object and properties.
+*/
 Programmer2.prototype = Object.create(Employee.prototype); 
 
 let pgObj2 = new Programmer2('Ashish', 40000, 'CSE', 'Java');

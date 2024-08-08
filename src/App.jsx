@@ -2,23 +2,19 @@ import TOPICS from "./pages/Topics/Topics";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import ListOfComponent from './ListOfComponents';
-import UseEffectExercise1 from './../4.REACT/hooks/useEffect/UseEffectExercise1';
-import UseEffectExercise2 from './../4.REACT/hooks/useEffect/UseEffectExercise2';
-import UseEffectExercise3 from './../4.REACT/hooks/useEffect/UseEffectExercise3';
-import UseEffectExercise4 from './../4.REACT/hooks/useEffect/UseEffectExercise4';
-import BindingEventIssue from './../4.REACT/binding-event-issue/BindingEventIssue';
-import HocMain from "../4.REACT/1.DesignPatterns/1.hoc/HocMain";
-import TabMain from "../4.REACT/1.DesignPatterns/2.CompoundPattern/TabMain";
-import SearchUi from "../4.REACT/1.MACHINE_CODING/searchUI/SearchUi";
-import BasicForm from "../4.REACT/1.MACHINE_CODING/basicForm/BasicForm";
-import CustomHookMain from "../4.REACT/hooks/customHooks/CustomHookMain";
-import UseEffectCounterProblem from "../4.REACT/UseEffectCounterProblem/UseEffectCounterProblem";
-import CallbackRunAtParticularTime from "../4.REACT/UseEffectCounterProblem/CallbackRunAtParticularTime";
-import UseUpdateEffectMain from "../4.REACT/hooks/customHooks/useUpdateEfffect/UseUpdateEffectMain";
-import UseOnceMain from "../4.REACT/hooks/customHooks/useOnce/UseOnceMain";
-import DebounceMain from "../4.REACT/hooks/customHooks/useDebounce/DebounceMain";
-import Practice from "../4.REACT/Practice";
-import ReactMemoMain from "../4.REACT/components/ReactApi/ReactMemoMain";
+import BindingEventIssue from '../4.REACT/src/binding-event-issue/BindingEventIssue';
+import HocMain from "../4.REACT/src/1.DesignPatterns/1.hoc/HocMain";
+import TabMain from "../4.REACT/src/1.DesignPatterns/2.CompoundPattern/TabMain";
+import SearchUi from "../4.REACT/src/1.MACHINE_CODING/searchUI/SearchUi";
+import BasicForm from "../4.REACT/src/1.MACHINE_CODING/basicForm/BasicForm";
+import CustomHookMain from "../4.REACT/src/hooks/customHooks/CustomHookMain";
+// import UseEffectCounterProblem from "../4.REACT/src/UseEffectCounterProblem/UseEffectCounterProblem";
+import CallbackRunAtParticularTime from "../4.REACT/src/UseEffectCounterProblem/CallbackRunAtParticularTime";
+import UseUpdateEffectMain from "../4.REACT/src/hooks/customHooks/useUpdateEfffect/UseUpdateEffectMain";
+import UseOnceMain from "../4.REACT/src/hooks/customHooks/useOnce/UseOnceMain";
+import DebounceMain from "../4.REACT/src/hooks/customHooks/useDebounce/DebounceMain";
+import Practice from "../4.REACT/src/Practice";
+import ReactMemoMain from "../4.REACT/src/components/ReactApi/ReactMemoMain";
 
 const basePath = "react-js-practice-quiz";
 
@@ -48,32 +44,12 @@ const components = [
   //   element: <CallbackRunAtParticularTime />,
   // },
   {
-    path: `${basePath}/UseEffectCounterProblem`,
-    element: <UseEffectCounterProblem />,
-  },
-  {
     path: `${basePath}/CustomHookMain`,
     element: <CustomHookMain />,
   },
   {
     path: `${basePath}/SearchUi`,
     element: <SearchUi />,
-  },
-  {
-    path: `${basePath}/UseEffectExercise1`,
-    element: <UseEffectExercise1 />,
-  },
-  {
-    path: `${basePath}/UseEffectExercise2`,
-    element: <UseEffectExercise2 />,
-  },
-  {
-    path: `${basePath}/UseEffectExercise3`,
-    element: <UseEffectExercise3 />,
-  },
-  {
-    path: `${basePath}/UseEffectExercise4`,
-    element: <UseEffectExercise4 />,
   },
   {
     path: `${basePath}/BindingEventIssue`,
