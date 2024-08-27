@@ -1,3 +1,23 @@
+## PolyPhill type question where callback is used
+```js
+const apiCall= (param) => {console.log(1)};
+apiCall('anyParam')
+
+const debouncedApiCall=useDebounce(apiCall)
+debouncedApiCall('anyParam');
+
+function(cb){
+  
+  return fn(...args){
+    
+  }
+}
+```
+### Minor output issues
+var a= 12 ** 2 // 144 it is Math.pow(12,2);
+
+
+
 ## This file contains the points which cannot be remain in mind but important ones
 
 1. The keys of prototype object can be iterate through (for in) loop not with Object.keys.

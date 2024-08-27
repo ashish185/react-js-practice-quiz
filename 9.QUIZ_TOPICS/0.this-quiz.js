@@ -1,56 +1,61 @@
 const questions = [
   {
     question: `
-    // Calling innerRegular inside printName
     const obj1={
-      name:'Ash',
-      printName:function(){
-        console.log('Name', this.name);
-        const innerRegular= function(){
-          console.log('InnerRegular', this.name, this === window);
-        }
-        const innerArrow= ()=>{
-          console.log('innerArrow', this.name, this === window);
-        }
-        innerRegular();
-        innerArrow();
-      }
-    };
-    obj1.printName()
-    // Calling innerRegular like closure
-    const obj2={
-      name:'Ash',
-      printName:function(){
-        console.log('Name', this.name);
-        const innerRegular= function(){
-          console.log('InnerRegular obj2', this.name, this === window);
-        }
-        const innerArrow= ()=>{
-          console.log('InnerArrow obj2', this.name, this === window);
-        }
-        return {innerRegular, innerArrow};
-      }
-    };
-    
-    obj2.printName().innerArrow();
-    
-    // Calling innerRegular like closure but without object
-    function printName(){
-        console.log('Name directly', this.name, this===window);
-        const innerRegular= function(){
-          console.log('InnerRegular directly', this.name, this === window);
-        }
-        const inner= ()=>{
-          console.log('InnerArrow directly', this.name, this === window);
-        }
-        return {innerRegular, inner};
-     };
-    
-     printName().innerRegular();
+     name:'Ash',
+     printNameRegular: function () {
+      console.log('Name', this.name); //Ash
+      const innerRegular= function(){
+      console.log('InnerRegular', this === window); //true because it is being called by window
+    }
+    const innerArrow= ()=>{
+      console.log('innerArrow', this.name, this === window); //Ash false, arrow function is in function executing context
+    }
+    innerRegular();
+    innerArrow();
+   },
+    printNameArrow: () => {
+    console.log('isWindow', this === window); //true
+    const innerRegular= function(){
+      console.log('InnerRegular', this === window); //true
+    }
+    const innerArrow= ()=>{
+      console.log('innerArrow', this === window); // true here inner arrow in the scope of printName arrow, and printName arrow this is window
+    }
+    innerRegular();
+    innerArrow();
+  }
+  };
+  obj1.printNameRegular();
+  obj1.printNameArrow();
     `,
     id: 0,
     correctAnswer: `inner ko call krne wala this hi h`,
     explanation: 'Object bounds to Global object'
+  },
+  {
+    question: `
+  const obj2={
+  name:'Ash',
+  printName:function(){
+    console.log('Name', this.name);
+    const innerRegular= function(){
+      /* Ynha par this whi hoga, jo obj2.printName() return krega */
+      console.log('InnerRegular', this.name, this, this === window);
+    }
+    const innerArrow= ()=>{
+      console.log('InnerArrow', this.name, this === window); //Ash false because this is of obj2 lexical context, 
+    }
+    return {innerRegular, innerArrow};
+  }
+};
+
+obj2.printName().innerRegular();
+obj2.printName().innerArrow();
+    `,
+    id: 0,
+    correctAnswer: ``,
+    explanation: ''
   },
   {
     question: `
