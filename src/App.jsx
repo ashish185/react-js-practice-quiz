@@ -15,6 +15,7 @@ import UseOnceMain from "../4.REACT/src/hooks/customHooks/useOnce/UseOnceMain";
 import DebounceMain from "../4.REACT/src/hooks/customHooks/useDebounce/DebounceMain";
 import Practice from "../4.REACT/src/Practice";
 import ReactMemoMain from "../4.REACT/src/components/ReactApi/ReactMemoMain";
+import ResponsiveWebDesign from "../4.REACT/src/ResponsiveWebDesign/ResponsiveWebDesign";
 
 const basePath = "react-js-practice-quiz";
 
@@ -66,6 +67,10 @@ const components = [
   {
     path: `${basePath}/BasicForm`,
     element: <BasicForm />,
+  },
+  {
+    path: `${basePath}/ResponsiveWebDesign`,
+    element: <ResponsiveWebDesign />,
   },
 ];
 

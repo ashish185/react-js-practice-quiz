@@ -21,7 +21,7 @@ function fetchWithAutoRetry(fetcher, maximumRetryCount) {
       fetcher().then(res => resolve(res))
       .catch(err => {
         if(retryCount<1){
-          reject(err);
+          reject(err); 
         }else{
           --retryCount;
           retry();

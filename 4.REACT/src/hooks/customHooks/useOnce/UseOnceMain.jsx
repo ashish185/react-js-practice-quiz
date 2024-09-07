@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import useOnce from './useOnce';
 import Child from './Child';
-
+/* 
+Here is a simple problem, implement useEffectOnce() as the name says itself, it runs an effect only once.
+*/
 const UseOnceMain = () => {
     const [count, setCount] = useState(0);
     useEffect(() => {

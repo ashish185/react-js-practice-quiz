@@ -68,3 +68,17 @@ console.log(mp.get(1));
 
 11. <style> tag k andar css rkhte h or ye <head/> m hota 
 12. external css in <link rel="stylesheet" href="styles.css">
+
+
+/*
+Preload Critical Resources:
+Preload important resources like fonts, CSS, and images to ensure they are prioritized in loading.
+##WebPerformance improvement
+*/
+<!-- <link rel="preconnect" href="https://cdn.glitch.global" crossorigin /> -->
+<!-- <link rel="dns-prefetch" href="https://cdn.glitch.global" crossorigin /> -->
+<!-- <link
+  rel="preload"
+  href="https://cdn.glitch.global/db01a8e4-9230-4c5c-977d-85d0e0c3e74c/image-1.jpg?v=1669198400523"
+  as="image"
+/> -->

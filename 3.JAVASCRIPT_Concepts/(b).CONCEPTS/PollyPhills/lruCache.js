@@ -1,3 +1,21 @@
+/* 
+  Logic: Map jo sbse pehle hoga vo Least Recently used hoga.
+
+  (USE CASES):
+  1. Agar cache full ho jaye, the Least Recently used hoga will pop out.
+  2. Agar koi map item get ki h to, vo original place se remove hokar last m add ho jayegi.
+  
+
+  Map Maintains the order of Insertion:
+  { '1' => 'Orange', '2' => 'Apple', '3' => 'Banana','4' => 'Watermelon'}
+   let's say if we access 2, then it would be more frequent accessed 
+  { '1' => 'Orange', '3' => 'Banana','4' => 'Watermelon','2' => 'Apple',}
+
+  If new item added like 5: Guava then '1'=>Orange is deleted
+  { '3' => 'Banana','4' => 'Watermelon','2' => 'Apple', '5': Guava}
+*/
+
+
 class LruCache {
 
   constructor(maxSize) {

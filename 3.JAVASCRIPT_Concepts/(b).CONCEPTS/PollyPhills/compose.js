@@ -1,4 +1,5 @@
 /* 
+Compose Executes from Right to left
 Create a function compose, which can take callback as function arguments
 and execute from right to left, with their result passing to args of second calling function.
 ForEx: compose(addFive, subtractTwo, multiplyFour)(5);
