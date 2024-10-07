@@ -2,18 +2,19 @@
   Order: Who wins will resolve first
 */
 
-Example 1: Basic Usage
-javascript
-Copy code
+// Example 1: Basic Usage
+// javascript
+// Copy code
 const promise1 = new Promise((resolve, reject) => setTimeout(resolve, 500, 'one'));
 const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 100, 'two'));
 
 Promise.race([promise1, promise2]).then((value) => {
   console.log(value);  // Output: 'two' (promise2 settles first)
 });
-Example 2: Handling Rejection
-javascript
-Copy code
+
+// Example 2: Handling Rejection
+// javascript
+// Copy code
 const promise1 = new Promise((resolve, reject) => setTimeout(resolve, 500, 'one'));
 const promise2 = new Promise((resolve, reject) => setTimeout(reject, 100, 'two'));
 
@@ -22,18 +23,18 @@ Promise.race([promise1, promise2]).then((value) => {
 }).catch((reason) => {
   console.log(reason);  // Output: 'two' (promise2 rejects first)
 });
-Example 3: Non-Promise Values
-javascript
-Copy code
+// Example 3: Non-Promise Values
+// javascript
+// Copy code
 const promise1 = new Promise((resolve, reject) => setTimeout(resolve, 500, 'one'));
 const nonPromiseValue = 42;
 
 Promise.race([promise1, nonPromiseValue]).then((value) => {
   console.log(value);  // Output: 42 (non-promise value is treated as resolved)
 });
-Example 4: Empty Iterable
-javascript
-Copy code
+// Example 4: Empty Iterable
+// javascript
+// Copy code
 Promise.race([]).then((value) => {
   console.log(value);  // This will never execute
 }).catch((reason) => {

@@ -16,6 +16,7 @@ import DebounceMain from "../4.REACT/src/hooks/customHooks/useDebounce/DebounceM
 import Practice from "../4.REACT/src/Practice";
 import ReactMemoMain from "../4.REACT/src/components/ReactApi/ReactMemoMain";
 import ResponsiveWebDesign from "../4.REACT/src/ResponsiveWebDesign/ResponsiveWebDesign";
+import FetchPractice from "../4.REACT/src/fetch/FetchPractice";
 
 const basePath = "react-js-practice-quiz";
 
@@ -71,6 +72,10 @@ const components = [
   {
     path: `${basePath}/ResponsiveWebDesign`,
     element: <ResponsiveWebDesign />,
+  },
+  {
+    path: `${basePath}/FetchPractice`,
+    element: <FetchPractice />,
   },
 ];
 

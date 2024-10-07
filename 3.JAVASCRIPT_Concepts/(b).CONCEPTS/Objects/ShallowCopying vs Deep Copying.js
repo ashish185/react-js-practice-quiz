@@ -41,24 +41,17 @@ console.log("___________________Using spread operator______________");
 
 const originalObj={ 
   name: 'Bhavya',
-  details: { rollNo: 121486, subjects: [ 'Maths', 'Ds' ] }
+  details: { rollNo: 1214185, subjects: [ 'Maths', 'Ds' ] }
 };
 
-//Does original object changes?
 const newObj={ ...originalObj};
-newObj.name='Ashish';
+newObj.rollNo= 1214186;
 
-// It does not change the original since it is not the nested key
-console.log(originalObj); //{name: "Ashish", details: {...}}
-console.log(newObj); // {name: "Bhavya", details: {...}}
 
-const newObj2={ ...originalObj};
-
-newObj2.details.rollNo= 1214185;
-
-//Does original object changes?
-console.log(originalObj); //{ name: 'Bhavya', rollNo: 121485, subjects: [ 'Maths', 'Ds' ] }
-console.log(newObj2);  
+console.log(originalObj.name);
+console.log(originalObj.details.rollNo); 
+console.log(newObj.name);
+console.log(newObj.details.rollNo); 
 // It does change the original even we change the new object roll number
 // Because roll number is nested, and spread operator does shallow copying.
 
