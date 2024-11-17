@@ -1,3 +1,19 @@
+/**
+ * Iify Block
+ * 
+ */
+// I Created like this
+async ()=> {
+    const res= await addFun(5, 6);
+    console.log(res);
+}
+
+//But it should be like this
+(() => {
+    const res = await addFun(5, 6);
+    console.log(res);
+})();
+
 /* 
 Fetch function. Dono k sath await lgana pdega
 nhi to error aayegi

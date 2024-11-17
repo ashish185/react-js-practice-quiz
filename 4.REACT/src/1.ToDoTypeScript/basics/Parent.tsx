@@ -38,7 +38,7 @@ const Parent = () => {
                 {
                     response.map(albumObj => {
                         const { url = '', title = '', id } = albumObj;
-                        return (
+                        return (    
                             <ImageComponent
                                 key={id}
                                 albumUrl={url}

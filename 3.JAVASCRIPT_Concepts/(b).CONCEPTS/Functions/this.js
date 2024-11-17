@@ -1,11 +1,16 @@
- /* For All Regular function call this is going to point winow object */
- const objx= {
-     outer: function name(params) {
-         console.log("outer",this); //this points to function
-         function inner(params) {
-             console.log("inner this",this); //this points to window obj
-         }
-         inner();//Regular function call
-     }
- }
- objx.outer(); //outer
+const obj1 = {
+    name: 'Ash',
+    printNameRegular: function () {
+        console.log('Name', this.name); 
+        const innerRegular = function () {
+            console.log('InnerRegular', this === window);
+        }
+        const innerArrow = () => {
+            console.log('innerArrow', this.name, this === window);
+        }
+        innerRegular();
+        innerArrow();
+    },
+};
+
+obj1.printNameRegular();
