@@ -1,0 +1,27 @@
+<!-- JavsScript is single threaded lang.
+    it means you can't execute two scripts at a time.
+
+    Q) We using async for making the time consuming, is it a different thread?
+    Ans No it is NON blocking, but not a different thread
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    if(window.Worker){
+        let myWorker = new Worker("webworker.js");
+        let msg = { addThis: {num1:2,num2: 4}};
+        myWorker.postMessage(msg);
+        myWorker.onmessage = function(e){
+            console.log(e.data.result);
+        }
+    }
+</script>
+</body>
+</html>
