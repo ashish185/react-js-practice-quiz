@@ -12,12 +12,12 @@ type GreetProps = {
 };
 /* Or another way */
 
-type GreetProps2 = {
+/* type GreetProps2 = {
   persons: {
     firstName: string;
     lastName: string;
   }[];
-};
+}; */
 
 export const Greet = ({persons}: GreetProps) => {
   return <div>Greet {persons.map((person) => <div>{`${person.firstName} ${person.lastName}`}</div>)}</div>;

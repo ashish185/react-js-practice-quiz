@@ -9,6 +9,7 @@ import PersonContainer from './components/5.Person';
 import { UserReducerContainer } from './components/7.UserReducerContainer';
 import { ThemeContainer } from './components/10.ThemeContainer';
 import UserContainer from './components/11.UserContainer';
+import { RestrictingPropsContainer } from './components/13.RestrictingProps';
 
 const persons=[{
   firstName:'Donald',
@@ -34,6 +35,7 @@ function App() {
         <UserReducerContainer />
         <ThemeContainer />
         <UserContainer />
+        <RestrictingPropsContainer />
       </header>
     </div>
   );

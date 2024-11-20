@@ -13,10 +13,10 @@ export const themeStyle = {
 
 const ThemeContext = createContext(themeStyle);
 
-type Theme = {
+type ThemeProps = {
   children: React.ReactNode;
 };
-export const Theme = ({ children }: Theme) => {
+export const Theme = ({ children }: ThemeProps) => {
   return (
     <ThemeContext.Provider value={themeStyle}>
       ThemeContainer
