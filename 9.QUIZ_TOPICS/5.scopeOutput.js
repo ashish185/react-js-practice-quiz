@@ -19,7 +19,7 @@ if (true) {
 }
 function xyz2() {
     var xy1 = 50; //As var is function scoped do not give error here
-    console.log("xy1", xy1); //50
+    console.log("xy1", xy1); //30
 }
 xyz2();
 /* in case of if block

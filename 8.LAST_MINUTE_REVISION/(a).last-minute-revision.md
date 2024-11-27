@@ -1,3 +1,5 @@
+## Closure is Lexical Scope and Lexical Scope is closure
+
 ## PolyPhill type question where callback is used
 ```js
 const apiCall= (param) => {console.log(1)};

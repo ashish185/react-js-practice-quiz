@@ -1,6 +1,9 @@
 import React from 'react';
 import { PersonProp } from './5.Person.types';
 
+/**
+ * Here we will learn, we can reuse type as Persons.type.ts,
+ */
 const PersonContainer = () => {
   const persons = [
     { firstName: 'Donald', lastName: 'Trump' },

@@ -104,4 +104,24 @@ export const sillyQuestions = [
     `,
     explanation: ''
   },
+
+  {
+    question: `
+      
+    `,
+    id: 5,
+    correctAnswer: `
+   // why this output is wrong 
+   const arr=[100, 50,150,200];
+  arr.sort();
+  console.log(arr);
+    `,
+    explanation:`
+    Here's what happens in your example:
+100 → starts with "1", Unicode value 49
+150 → starts with "1", Unicode value 49
+200 → starts with "2", Unicode value 50
+50 → starts with "5", Unicode value 5
+    `
+  },
 ]
