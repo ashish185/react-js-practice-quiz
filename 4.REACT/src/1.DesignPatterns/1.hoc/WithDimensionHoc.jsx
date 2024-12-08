@@ -16,3 +16,21 @@ const WithDimensionHoc = (Component) => {
 };
 
 export default WithDimensionHoc;
+
+
+const Hello = ({ name }) => {
+  return <h1>Hello, {name}!</h1>;
+};
+
+// A simple HOC that logs a message when a component mounts
+const withLogger = (WrappedComponent) => {
+  return (props) => {
+    useEffect(() => {
+      console.log(`${WrappedComponent.name} mounted`);
+    }, []);
+
+    return <WrappedComponent {...props} />;
+  };
+};
+
+const EnhancedHello = withLogger(Hello);

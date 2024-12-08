@@ -1,3 +1,8 @@
+/* Whenever the input is given as sorted.
+    The idea come to our mind is that
+    here Binary search can be applied.
+*/
+
 const evenArr=[11,12,13,14,15,16,17,18,19,20];
 // mid =0+9/2 = 4
 

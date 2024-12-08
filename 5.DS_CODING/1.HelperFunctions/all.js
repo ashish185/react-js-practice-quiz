@@ -11,6 +11,9 @@ console.log(typeof(num3),(typeof(+num1)),+num2);
 
 console.log("1"+2);//12
 console.log(2+"1");//21
+console.log('2'-1);//1
+console.log('2'-'2');//0
+console.log('A'-'2');//NAN
 
 /* Precision */
  let z= 4/3;
@@ -26,5 +29,5 @@ console.log(2+"1");//21
  //instance of and type of
 
 const arr=[];
-console.log( arr instanceof Array); //true
+console.log( arr instanceof Array, Array.isArray()); //true
 console.log( typeof arr); //object

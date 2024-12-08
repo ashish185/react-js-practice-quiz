@@ -1,6 +1,6 @@
 
 // https://leetcode.com/problems/reverse-linked-list/
-const LinkedList = require('./LinkedList');
+const LinkedList = require('../LinkedList');
 let l1= new LinkedList();
 l1.add(1);
 l1.add(2);

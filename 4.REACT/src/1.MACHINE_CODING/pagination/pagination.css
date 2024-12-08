@@ -1,0 +1,23 @@
+.page-number {
+    padding: 2px;
+    border: 1px solid black;
+    margin: 0px 2px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow: auto;
+    width: 200px;
+    max-width: 400px;
+    border: 1px solid orange;
+    padding: 2px;
+    /* img {
+      object-fit: contain;
+    } */
+  }
+  .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  

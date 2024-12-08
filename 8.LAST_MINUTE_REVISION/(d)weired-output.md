@@ -1,4 +1,5 @@
 /* 
+## QUESTION 1:
  ```js
 console.log('+true', +true); //1
 console.log('!true', !'true'); //** wrong MyAns: 0, Actual: false
@@ -22,7 +23,7 @@ console.log("Object.is(-0,+0)", Object.is(+0, -0)) //false
  //  console.log(*'2'); // '2'
  ```
 
- ## Array methods
+ ## QUESTION 2:
  : They mutates the Original array
  ```js
  /* Shift */
@@ -40,6 +41,70 @@ const newLength = arr.unshift(10);
 console.log(newLength); // 4
 console.log(arr);       // [10, 20, 30, 40]
 ```
+
+## QUESTION 3:
+```js
+const arr=[1,2,3][4,5,1];
+console.log(arr);
+```
+## QUESTION 4:
+```js
+const obj={
+  1:'a',
+  2:'b',
+  '2':'b',
+  [1]:'b1'
+};
+console.log(obj);
+```
+## QUESTION 5:
+```js
+{
+  function print(){
+    console.log('Hello')
+  }
+}
+print(); //Hellow
+```
+
+## QUESTION 6: 
+```js
+{
+  function print(){
+    console.log('Hello')
+  }
+}
+var print;
+console.log(print); //fn print, since print takes more priority
+```
+
+## QUESTION 6: 
+```js
+{
+  function print(){
+    console.log('Hello')
+  }
+}
+var print;
+console.log(print); //fn print, since print takes more priority
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Comparison Table:
 

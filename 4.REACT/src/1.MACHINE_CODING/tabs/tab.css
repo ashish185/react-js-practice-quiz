@@ -1,0 +1,10 @@
+.tab-decoration {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.tab-content{
+    border: 1px solid orange;
+    height: 90vh;
+}

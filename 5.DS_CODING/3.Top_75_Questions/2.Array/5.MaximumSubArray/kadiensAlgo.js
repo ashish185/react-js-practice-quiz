@@ -7,11 +7,6 @@ const maximumSubArr = (nums) => {
 
   let currBestSum = nums[0];
   let overAllBestSum= nums[0];
-  let arr = [];
-  let track = {
-    startIndx: 0,
-    endIndx: 0
-  };
   for (let i = 1; i < nums.length; i++) {
     if (currBestSum >= 0) {
       currBestSum = currBestSum + nums[i];

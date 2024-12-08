@@ -20,8 +20,7 @@ Ans) Yes, by default they are static.
 Static positioned elements are not affected by the top, bottom, left, and right properties
 2) fixed: Positon fixed is relative to the view port whereas absolute is relative to the parent.
 Like Humnay TNT page par FOOTER fixed kiya tha na. To usme ye code lga hoga
-3) absolute: Absolute parent se k respect m change krta postion. To use absolute
-Parent element should have relative position
+3) absolute: Relative to its nearest positioned ancestor (relative, absolute, or fixed).
 4) relative: where the element position relativly to the page.
 5) sticky: An element with position: sticky; is positioned based on the user's scroll position.
 Yad: Like agar hum TNT m chchte ki Upar jo error aati h vo fixed rhe ho LOGO bhi dikhta rhe then we can use it
