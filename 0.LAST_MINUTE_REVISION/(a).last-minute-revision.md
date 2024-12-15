@@ -26,7 +26,7 @@ const apiCall= (param) => {console.log(1)};
 apiCall('anyParam')
 
 const debouncedApiCall=useDebounce(apiCall)
-debouncedApiCall('anyParam');
+R('anyParam');
 
 function(cb){
   

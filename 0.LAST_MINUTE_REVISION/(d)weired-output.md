@@ -35,6 +35,7 @@ console.log(arr);            // [20, 30, 40]
 ```
 <!-- Un shift -->
 ```js
+//Un shift inserts the item at first position and return new length of array.
 const arr = [20, 30, 40];
 const newLength = arr.unshift(10);
 

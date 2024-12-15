@@ -43,3 +43,6 @@ Check if a given string is a palindrome (reads the same backward as forward).
 
 Given a sorted array of strings and a target string, find the index of the target string using binary search (assuming lexicographical order, meaning alphabetical order).
 Find the first occurrence of a specific character in a sorted string using binary search (consider variations like case sensitivity or handling multiple occurrences).
+
+
+

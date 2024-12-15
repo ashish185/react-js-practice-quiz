@@ -3,6 +3,7 @@ import InfiniteScroll from "./1.MACHINE_CODING/infinteScroll/InfiniteScroll";
 import Pagination from "./1.MACHINE_CODING/pagination/Pagination";
 import PersistedTab from "./1.MACHINE_CODING/tabs/PersistedTab";
 import Parent from "./1.ToDoTypeScript/basics/Parent";
+import OUTPUT from "./OUTPUT/OUTPUT";
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <>
       {/* <Pagination /> */}
       {/* <InfiniteScroll />  */}
-      <BasicForm />         
+      {/* <BasicForm />          */}
+      <OUTPUT />
     </>
     // <Parent />
     
