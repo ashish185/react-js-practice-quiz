@@ -131,7 +131,7 @@ Example: `<br>`
 <input type="text" placeholder="Enter your name">
 ```
 
-19. What is difference between <figure> and <img> lies in their roles and usage in HTML?
+19. What is difference between <figure> and <img> and picture lies in their roles and usage in HTML?
 -  `<figure>`: Grouping Media with Captions
 
 

@@ -12,7 +12,6 @@ INP: (Best)0.2se<=NeedImprovement<=0.5 (worst)
 50-89: Good,
 90-100: Best
 
-
 ## Weighage
 TBT(total Blocking time):25%,
 Speed index,
@@ -29,7 +28,8 @@ Lazy Load Images: For non-critical images below the fold, use loading="lazy" to 
 Compress Images: Use image optimization tools (like TinyPNG or ImageOptim) to reduce file sizes without significant quality loss.
 5. Lazy load below the fold content like images,videos.
 6. Optimize Server Response Time (TTFB)
-7. Optimize the Critical Rendering Path. Use the rel="preload" attribute to preload important resources such as the main stylesheet, fonts, and critical images,
+7. Optimize the Critical Rendering Path(DOm=>CSSOm=>). Use the rel="preload" attribute to preload important resources such as the main stylesheet, fonts, and critical images,
+
 
 
 ## How do we measure scalability of frontend?
@@ -37,3 +37,17 @@ Compress Images: Use image optimization tools (like TinyPNG or ImageOptim) to re
 2. Stress testing: using JMeter.
 3. Performance benchmark: FCP, LCP lighthouse
 4. Analytics and Monitoring:  Google Analytics, New Relic, or Datadog
+
+
+
+### **Key Differences**
+
+| Feature                | `<link rel="preload">`              | `<link rel="prefetch">`              |
+|------------------------|-------------------------------------|--------------------------------------|
+| **Purpose**            | Load critical resources now.       | Load future resources in advance.   |
+| **Priority**           | High priority.                     | Low priority.                       |
+| **When Used**          | Current page needs it immediately. | For future pages or interactions.   |
+| **Blocking**           | Blocks rendering until loaded (for critical CSS/JS). | Does not block rendering.           |
+| **Impact on User**     | Improves current page performance. | Improves perceived next-page speed. |
+
+---
