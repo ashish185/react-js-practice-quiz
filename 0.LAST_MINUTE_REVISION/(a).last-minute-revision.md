@@ -1,3 +1,24 @@
+## Recursion
+```
+const arr=[2,[2,4,5],3];
+
+const myMethod= (arr)=> {
+    const res=[];
+    const md=(inp)=>{
+      if(!Array.isArray(inp)){
+         res.push(inp);
+         return;
+     }
+      inp.forEach(item => md(item))    
+    }
+    md(arr);
+    console.log(res);
+    return res;
+};
+
+myMethod(arr);
+
+```
 ## This help in think of recursion
 ```js
 //X^Y
@@ -158,15 +179,20 @@ const element = document.querySelector('.a.b');
 ## General regex unit testing.
 ## Phases of Browser: Dom creation(html parsing) -> CSSOM creation -> Render Tree (CSSOM+ DOM) -> Layout -> Paint
 ## async vs defer(main order of scripts)
+- Without async defer: htmlParing => script loads => script execute => html parsing
+- Async=> htmlParing => script loads(parallel) => script execute => html parsing (does not maintains order of script)
+- Defer=> htmlParing => script loads(parallel) => html parsing =>script execute (maintains order of script)
 ## Promise ka resolve reject setTimeout catch finally code write
 ## bind ka polyfill: Internal it is uses apply so that polyfill likhne ki practice ho jaye
 ## Map
 ```js
 mp.set('key',value) mp.has('key') map.get(key)//
 //1. size is not a function of Map, it's property of map just like length
-mp.size() //Incorrect
+mp.size() //❌Incorrect
 mp.size //Correct
 mp.keys()
+mp.map() //❌ Error: Type 'number' does not satisfy the constraint '{}'.
+mp.forEach((value, key)=>{})✅ //Gives value and key(not index
 //How to iterate map
 // How to get the fist value of Map using next().value
 mp.keys().next().value => first key

@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-  var allowedOrigin = ['http://127.0.0.1:5500'];
+var allowedOrigin = ['http://127.0.0.1:5500'];
 const corsOptions = {
   origin: function(origin, callback) {
     if (allowedOrigin.indexOf(origin) !== -1 || !origin) {
