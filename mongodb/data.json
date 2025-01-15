@@ -1,0 +1,93 @@
+[
+    {
+      "maker": "Tata",
+      "model": "Nexon",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine": {
+        "type": "Turbocharged",
+        "cc": 1199,
+        "torque": "170 Nm"
+      },
+      "features": [
+        "Touchscreen",
+        "Reverse Camera",
+        "Bluetooth Connectivity"
+      ],
+      "sunroof": false,
+      "airbags": 2
+    },
+    {
+      "maker": "Hyundai",
+      "model": "Creta",
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine": {
+        "type": "CRDi",
+        "cc": 1493,
+        "torque": "250 Nm"
+      },
+      "features": [
+        "Sunroof",
+        "Apple CarPlay",
+        "Cruise Control"
+      ],
+      "sunroof": true,
+      "airbags": 6
+    },
+    {
+      "maker": "Maruti Suzuki",
+      "model": "Baleno",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine": {
+        "type": "DualJet",
+        "cc": 1197,
+        "torque": "113 Nm"
+      },
+      "features": [
+        "Heads-up Display",
+        "360-Degree Camera",
+        "SmartPlay Pro+"
+      ],
+      "sunroof": false,
+      "airbags": 4
+    },
+    {
+      "maker": "Kia",
+      "model": "Seltos",
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine": {
+        "type": "VGT",
+        "cc": 1493,
+        "torque": "250 Nm"
+      },
+      "features": [
+        "Bose Sound System",
+        "Ventilated Seats",
+        "Panoramic Sunroof"
+      ],
+      "sunroof": true,
+      "airbags": 6
+    },
+    {
+      "maker": "Mahindra",
+      "model": "XUV700",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine": {
+        "type": "Turbocharged mStallion",
+        "cc": 1997,
+        "torque": "380 Nm"
+      },
+      "features": [
+        "ADAS",
+        "Digital Cockpit",
+        "Skyroof"
+      ],
+      "sunroof": true,
+      "airbags": 7
+    }
+  ]
+  
