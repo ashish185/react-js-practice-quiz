@@ -1,0 +1,37 @@
+[
+    {
+        "_id": "order1",
+        "user_id": "user1",
+        "product": "Laptop",
+        "amount": 50000,
+        "order_date": "2024-08-01"
+    },
+    {
+        "_id": "order2",
+        "user_id": "user2",
+        "product": "Mobile Phone",
+        "amount": 15000,
+        "order_date": "2024-08-05"
+    },
+    {
+        "_id": "order3",
+        "user_id": "user1",
+        "product": "Headphones",
+        "amount": 2000,
+        "order_date": "2024-08-10"
+    },
+    {
+        "_id": "order4",
+        "user_id": "user3",
+        "product": "Tablet",
+        "amount": 25000,
+        "order_date": "2024-08-12"
+    },
+    {
+        "_id": "order5",
+        "user_id": "user4",
+        "product": "Smart Watch",
+        "amount": 8000,
+        "order_date": "2024-08-15"
+    }
+]
