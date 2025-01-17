@@ -33,3 +33,13 @@ studentObj.getFullName.bind(studentObj2)('Kumar', 'Goyal');
 
 console.log('//Case3: When we send the arg during bind as well as calling, Which one takes priority');
 studentObj.getFullName.bind(studentObj2, 'Kumar', 'Goyal')('Kumar1', 'Goyal1'); //The args which sent during calling takes priority.
+
+function multiply(a, b) {
+  return a * b;
+}
+
+// Create a new function where `a` is always 2
+const double = multiply.bind(null, 2);
+
+console.log(double(5)); // Output: 10
+console.log(double(10)); // Output: 20

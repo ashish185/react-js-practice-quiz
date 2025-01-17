@@ -1,3 +1,24 @@
+## Recursion
+```
+const arr=[2,[2,4,5],3];
+
+const myMethod= (arr)=> {
+    const res=[];
+    const md=(inp)=>{
+      if(!Array.isArray(inp)){
+         res.push(inp);
+         return;
+     }
+      inp.forEach(item => md(item))    
+    }
+    md(arr);
+    console.log(res);
+    return res;
+};
+
+myMethod(arr);
+
+```
 ## This help in think of recursion
 ```js
 //X^Y
@@ -26,7 +47,7 @@ const apiCall= (param) => {console.log(1)};
 apiCall('anyParam')
 
 const debouncedApiCall=useDebounce(apiCall)
-debouncedApiCall('anyParam');
+R('anyParam');
 
 function(cb){
   
@@ -80,14 +101,18 @@ Fixed: Positioned relative to the viewport (the browser window).
 - const element = document.getElementById("myH1"); 
 let text = element.getAttribute("class")
 getAttribute, removeAttribute
-- To get Elements
+- To get Elements: Not well work with ids
 ```js
+  // <div class="a b">Hello</div>
+
+const element = document.querySelector('.a.b');
     - document.querySelectorAll("div");
     - document.querySelectorAll("#id"); - document.querySelectorAll(".className");
     - document.querySelectorAll("ul li"); //(Direct + Nested) Select all <li> elements within <ul> elements
     - document.querySelectorAll("ul>li"); //(Direct Child) Select all <li> under <ul> elements but don't include elements inside li
     - document.querySelectorAll(".aClass, .bClass"); / Select all elements with class "aClass" or "bClass"
     - document.querySelectorAll("tr:nth-child(even)");
+    - document.querySelectorAll("tr:nth-child(2)");
 ```      
 - Analogy
 ```js
@@ -99,7 +124,7 @@ getAttribute, removeAttribute
     div.addEventListener("click", event => {
         // Your event handling code here
         console.log("Div clicked!");
-    });
+    });0
   });
 ```
 ## splice vs slice
@@ -108,7 +133,7 @@ getAttribute, removeAttribute
     item1, item2, ..., itemN (optional): These are the new elements (zero or more) to insert at the start index. 
     ```js
     const arr=[1,2,3,4];
-    splice(0,2): // return [1,2],original arr becomes [3,4]
+    splice(0,2): // return deleted elements [1,2],original arr becomes [3,4]
     splice(1): // Remove all the items from index 1, it returns [2,3,4] and original arr becomes [1]
     ```
 - array.slice(start, end:exclusive)
@@ -154,15 +179,20 @@ getAttribute, removeAttribute
 ## General regex unit testing.
 ## Phases of Browser: Dom creation(html parsing) -> CSSOM creation -> Render Tree (CSSOM+ DOM) -> Layout -> Paint
 ## async vs defer(main order of scripts)
+- Without async defer: htmlParing => script loads => script execute => html parsing
+- Async=> htmlParing => script loads(parallel) => script execute => html parsing (does not maintains order of script)
+- Defer=> htmlParing => script loads(parallel) => html parsing =>script execute (maintains order of script)
 ## Promise ka resolve reject setTimeout catch finally code write
 ## bind ka polyfill: Internal it is uses apply so that polyfill likhne ki practice ho jaye
 ## Map
 ```js
-mp.set('key',value) mp.has('key) map.get(key)//
+mp.set('key',value) mp.has('key') map.get(key)//
 //1. size is not a function of Map, it's property of map just like length
-mp.size() //Incorrect
+mp.size() //❌Incorrect
 mp.size //Correct
 mp.keys()
+mp.map() //❌ Error: Type 'number' does not satisfy the constraint '{}'.
+mp.forEach((value, key)=>{})✅ //Gives value and key(not index
 //How to iterate map
 // How to get the fist value of Map using next().value
 mp.keys().next().value => first key
@@ -170,20 +200,43 @@ mp.keys().next().value => first key
 for (const [key, value] of map) {
   console.log(`Key: ${key}, Value: ${value}`);
 }
-
+//set.add(1);
 for (const key of map.keys()) {
   const value = map.get(key);
   console.log(`Key: ${key}, Value: ${value}`);
 }
 ```
-## for(const el in arr){ }, in means index
+## for(const el in arr){ }, in means index // good for proto
 ## for(const el of arr){ }, in means value, here break and continue works.
 ## for(let x=0; x>20, x++){ }, tradition for lop
 ## Prototypal inheritance
+```js
+const lion = {
+    name: 'Lion',
+    sound: 'Roar',
+    getSound: function () {
+        console.log(`${this.name} animal sound is ${this.sound}`)
+    }
+}
+lion.getSound();
+
+const dog = {
+    name: 'Dog',
+    sound: 'Bark',
+};
+
+dog.__proto__ = lion;
+dog.getSound();
+
+```
 ## defer vs async
 ## React.forwardRef(Comp),<Comp ref={ref}/> Comp=(props, ref) not comp({ref})
 ## React custom hooks can be useOnline(), useToggleSwitch
 ## Basic form bna lo with input type radio and all.
+```js
+input type checkbox
+checkbox accepts checked and value prop
+```
 ## Flatten the array, deep cloning. multiLevelFlatten(arr3, [], 3);  
 ## memoize args caching
 ```js
@@ -199,7 +252,7 @@ Object.defineProperty(employee,"id",{writable:false});
 ```
 ```js
 Object.freeze(obj);//Freeze neither allow property to delete nor modify
-Object.seal(obj2); //Seal does not allow property to delete but modify
+Object.seal(obj2); //Seal does not allow property to delete ** but allows modify
 ```
 
 ## Iterate set like this or 

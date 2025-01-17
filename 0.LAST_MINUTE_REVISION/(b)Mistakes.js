@@ -9,7 +9,7 @@ async ()=> {
 }
 
 //But it should be like this
-(() => {
+(async() => {
     const res = await addFun(5, 6);
     console.log(res);
 })();

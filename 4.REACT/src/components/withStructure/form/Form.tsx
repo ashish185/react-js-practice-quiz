@@ -17,13 +17,18 @@ const Form = () => {
             </div>
             <div>
                 <label htmlFor="location">Location</label>
-                <select name="location" id="location">
-                    <option value="">Country Name</option>
-                    <option value="IN">India</option>
-                    <option value="US">United States</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="AU">Australia</option>
-                    <option value="CA">Canada</option>
+                <select
+                    id="dropdown"
+                    // value={selectedValue}
+                    // onChange={handleChange}
+                    style={{ marginLeft: "10px", padding: "5px" }}
+                >
+                    <option value="" disabled>
+                        -- Select an option --
+                    </option>
+                    <option value="Option1">Option 1</option>
+                    <option value="Option2">Option 2</option>
+                    <option value="Option3">Option 3</option>
                 </select>
             </div>
             <div>

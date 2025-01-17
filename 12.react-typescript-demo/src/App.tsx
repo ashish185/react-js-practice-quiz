@@ -10,6 +10,7 @@ import { UserReducerContainer } from './components/7.UserReducerContainer';
 import { ThemeContainer } from './components/10.ThemeContainer';
 import UserContainer from './components/11.UserContainer';
 import { RestrictingPropsContainer } from './components/13.RestrictingProps';
+import LastMinutePracticeTypescript from './components/LastMinutePracticeTypescript';
 
 const persons=[{
   firstName:'Donald',
@@ -26,16 +27,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Greet persons={persons} />
+        {/* <Greet persons={persons} /> */}
         {/* <Status status={'OTHER STATUS'} /> */}{' '}
         {/* Type '"OTHER STATUS"' is not assignable to type 'STATUS_CODE' */}
-        <Status status={STATUS_CODE.ERROR} />
+        {/* <Status status={STATUS_CODE.ERROR} />
         <StylesContainer />
         <PersonContainer />
         <UserReducerContainer />
         <ThemeContainer />
         <UserContainer />
-        <RestrictingPropsContainer />
+        <RestrictingPropsContainer /> */}
+        <LastMinutePracticeTypescript />
       </header>
     </div>
   );
