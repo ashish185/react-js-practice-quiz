@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Tag component Renders as expected 1`] = `
+<div>
+  <code>
+    css
+  </code>
+  <code>
+    bootstrap
+  </code>
+</div>
+`;
