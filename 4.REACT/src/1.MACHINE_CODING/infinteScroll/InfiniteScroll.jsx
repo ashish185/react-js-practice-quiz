@@ -37,12 +37,15 @@ const InfiniteScroll = () => {
       setData(data.products);
       console.log("data", data);
     })();
-    window.addEventListener('scroll', ()=>{})
+    document.addEventListener('scroll', (event)=>{
+      console.log("Event", event);
+
+    })
     return ()=>{
       window.removeEventListener('scroll', ()=>{})
     };
     /* 
-    Left  with logi
+    Left  with logic
     */
   }, []);
 

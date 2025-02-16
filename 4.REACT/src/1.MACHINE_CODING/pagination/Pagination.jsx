@@ -20,22 +20,29 @@ const dummyData = [
     price: "400",
   },
 ];
+
+const LIMIT=10;
+
 const Pagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(100);
+  const [totalPage, setTotalPage] = useState(0);
   const [data, setData] = useState(dummyData);
 
   const getApiData = async () => {
-    const res = await fetch("https://dummyjson.com/products?limit=10&skip=10");
+    const res = await fetch(
+      `https://dummyjson.com/products?limit=${LIMIT}&skip=${currentPage * LIMIT}`
+    );
     const jsonData = await res.json();
     return jsonData;
   };
 
   useEffect(() => {
     (async () => {
-      const data = await getApiData();
-      setData(data.products);
-      console.log("data", data);
+       const { total, skip, limit, products } = = await getApiData();
+      setData(products);
+      setTotalPage(Math.ceil(total / limit));
+      console.log("response1", res, Math.ceil(total / limit));
+      console.log("data", products);
     })();
   }, []);
 
@@ -52,8 +59,19 @@ const Pagination = () => {
       <div className="card-wrapper">{renderCards()}</div>
       <div>
         <button>Prev</button>
-        <span className="page-number">1</span>
-        <button>Next</button>
+        <span
+          onClick={() => setCurrentPage((page) => (page > 0 ? page - 1 : page))}
+          className="page-number"
+        >
+          1
+        </span>
+        <button
+          onClick={setCurrentPage((page) =>
+            page < totalPage ? page + 1 : page
+          )}
+        >
+          Next
+        </button>
       </div>
     </div>
   );

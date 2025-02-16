@@ -6,7 +6,6 @@ import Parent from "./1.ToDoTypeScript/basics/Parent";
 import OUTPUT from "./OUTPUT/OUTPUT";
 import { QuizMainReact } from "./Quiz/QuizMainReact";
 
-
 function App() {
   return (
     <>
@@ -17,7 +16,6 @@ function App() {
       <QuizMainReact />
     </>
     // <Parent />
-    
   );
 }
 

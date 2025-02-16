@@ -1,0 +1,37 @@
+[
+    {
+        "_id": "user1",
+        "name": "Amit Sharma",
+        "email": "amit.sharma@example.com",
+        "phone": "+91-987654210",
+        "address": "MG Road, Mumbai, Maharashtra"
+    },
+    {
+        "_id": "user2",
+        "name": "Priya Verma",
+        "email": "priya.verma@example.com",
+        "phone": "+91-987654211",
+        "address": "Nehru Place, New Delhi, Delhi"
+    },
+    {
+        "_id": "user3",
+        "name": "Rahul Singh",
+        "email": "rahul.singh@example.com",
+        "phone": "+91-987654212",
+        "address": "Sector 18, Noida, Uttar Pradesh"
+    },
+    {
+        "_id": "user4",
+        "name": "Anjali Nair",
+        "email": "anjali.nair@example.com",
+        "phone": "+91-987654213",
+        "address": "Marine Drive, Kochi, Kerala"
+    },
+    {
+        "_id": "user5",
+        "name": "Vikram Desai",
+        "email": "vikram.desai@example.com",
+        "phone": "+91-987654214",
+        "address": "Park Street, Kolkata, West Bengal"
+    }
+]
