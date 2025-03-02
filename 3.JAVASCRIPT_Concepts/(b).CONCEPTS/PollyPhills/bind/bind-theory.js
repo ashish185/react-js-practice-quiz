@@ -9,9 +9,6 @@ Syntax: function.apply(thisArg, [argsArray])
 Syntax: function.bind(thisArg, arg1, arg2, ...)
 
 */
-
-
-
 const studentObj= {
   name:'Ashish',
   getFullName: function (middleName, lastName){

@@ -206,8 +206,12 @@ for (const key of map.keys()) {
   console.log(`Key: ${key}, Value: ${value}`);
 }
 ```
-## for(const el in arr){ }, in means index // good for proto
-## for(const el of arr){ }, in means value, here break and continue works.
+## forLoopComparison
+speed wise
+ 1. for(const el of arr){ }, in means value, here break and continue works. 
+ 2. forEach, callback overhead
+ 3. for(const el in arr){ }, in means index // good for proto
+ 
 ## for(let x=0; x>20, x++){ }, tradition for lop
 ## Prototypal inheritance
 ```js
@@ -328,3 +332,20 @@ if(id){
   )
 }
 ```
+
+## Promise.any vs Promise.race vs Promise.all vs Promise.allSettled
+- any=> Overall rejected when all promise rejected
+- race=> Overall reject or resolve depend upon fastest promise.
+- all=> If any of the promise rejects it rejects overall.
+- Promise.allSettled => It lets other all the promise to resolved and reject.
+
+## Infinite scroll logic
+```js
+   if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+        setCurrnetPage((currentPage) => currentPage + 1);
+    }
+```
+
+## Whose use effect will be called first
+Children, Main, Hook used inside Main
+**Ans**  ChildrenComponent> Hook> Main

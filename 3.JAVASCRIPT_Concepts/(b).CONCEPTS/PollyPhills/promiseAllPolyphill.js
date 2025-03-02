@@ -19,6 +19,7 @@ Promise.all([Promise.resolve('1'), Promise.reject('2ndReject')])
 
 function myPromiseAll(promisesArr) {
 	let response = [];
+	let completed = 0; // ⚠️ I did not used it initially
 	if(!promisesArr.length){
 		return promisesArr;
 	}
@@ -27,7 +28,7 @@ function myPromiseAll(promisesArr) {
 			.then(res => {
 				response[index] = res;
 				//*** Agar sare promise resolve ho gye tbhi success result aayega
-				if (index === promisesArr.length - 1) {
+				if (completed === promisesArr.length - 1) {
 					resolve(response);
 				}
 			})

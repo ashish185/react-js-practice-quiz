@@ -1,3 +1,20 @@
+## A library that helps with cross-browser compatibility while providing prototypes (possibly polyfills)
+Core-JS
+es @babel/preset-env to include only necessary polyfills.
+```js
+import "core-js/es/array/includes";  // Import only what's needed
+
+const numbers = [1, 2, 3];
+
+if (numbers.includes(2)) {
+    console.log("Number found!");
+} else {
+    console.log("Number not found!");
+}
+
+```
+
+
 ## What is Core web vitals?
 LCP(), CLS, INP
 

@@ -1,74 +1,66 @@
-import React, { useEffect, useState } from "react";
-import "./pagination.css";
+'use client'
+import { useEffect, useState } from "react";
+import { MemeCard } from "./MemeCard";
+import Shimmer from "./Shimeer";
 
-const Card = ({ src, title }) => {
-  return (
-    <div className="card">
-      <img src={src} alt={'The is product'} loading="lazy" width={150} height={150}></img>
-      <p>
-        <b>{title}</b>
-      </p>
-    </div>
-  );
-};
-
-const dummyData = [
-  {
-    thumbnail:
-      "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png",
-    title: "xyz",
-    price: "400",
-  },
-];
+const LIMIT = 10;
 const InfiniteScroll = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(100);
-  const [data, setData] = useState([]);
+  const [memes, setMemes] = useState([]);
+  const [showShimmer, setShowShimmer] = useState(false);
+  const [totalPage, setTotalPage] = useState();
+  const [currentPage, setCurrnetPage] = useState(1);
+  const [numberOfRecords, setNumberOfRecords] = useState(LIMIT);
 
-  const getApiData = async () => {
-    const res = await fetch("https://dummyjson.com/products");
+  useEffect(() => {
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    fetchMemes((currentPage - 1) * LIMIT);
+  }, [currentPage]);
+
+  const handleScroll = () => {
+    //scrollY - how much I have scrolled
+    // innerHeight - heigh of the window(visible setion)
+    // document.body.scrollHeight - total height of the web page
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+        setCurrnetPage((currentPage) => currentPage + 1);
+    }
+  };
+
+  const getApiData = async (recordsToSkip) => {
+    console.log('number of records', numberOfRecords);
+    const res = await fetch(
+      `https://dummyjson.com/products?limit=${LIMIT}&skip=${recordsToSkip}`
+    );
     const jsonData = await res.json();
     return jsonData;
   };
 
-  useEffect(() => {
-    (async () => {
-      const data = await getApiData();
-      setData(data.products);
-      console.log("data", data);
-    })();
-    document.addEventListener('scroll', (event)=>{
-      console.log("Event", event);
-
-    })
-    return ()=>{
-      window.removeEventListener('scroll', ()=>{})
-    };
-    /* 
-    Left  with logic
-    */
-  }, []);
-
-  const printDimnension=()=> {
-    // window.innerHeight;
-    // document.body.scrollHeight;
-    // window.scrollY;
-  }
-
-  const renderCards = () => {
+  const fetchMemes = async (rec) => {
+    setShowShimmer(true);
+    const json = await getApiData(rec);
+    console.log(json.total);
+    setTotalPage(Math.ceil(parseInt(json.total) / LIMIT));
+    console.log(json);
     
-    return data.map((obj, index) => {
-      const { thumbnail, title } = obj;
-      return <Card key={thumbnail} src={thumbnail} title={title} />;
-    });
+
+    setShowShimmer(false);
+    setMemes((memes) => [...memes, ...json.products]);
   };
 
   return (
-    <div>
-      <h1>Infinite Scroll</h1>
-      <div className="card-wrapper">{renderCards()}</div>
+    <div style={{ display: "flex", flexWrap: 'wrap' }}>
+      <h1>Total Pages are: {`${totalPage}`}</h1>
+      {memes.map((meme, i) => (
+        <MemeCard key={i} data={meme} />
+      ))}
+
+      {showShimmer && <Shimmer />}
     </div>
   );
 };
-
 export default InfiniteScroll;

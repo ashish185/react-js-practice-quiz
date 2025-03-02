@@ -3,17 +3,26 @@ import InfiniteScroll from "./1.MACHINE_CODING/infinteScroll/InfiniteScroll";
 import Pagination from "./1.MACHINE_CODING/pagination/Pagination";
 import PersistedTab from "./1.MACHINE_CODING/tabs/PersistedTab";
 import Parent from "./1.ToDoTypeScript/basics/Parent";
+import PracticeHook from "./hooks/PracticeHook";
+import UseResizeMain from "./hooks/UseResizeMain";
 import OUTPUT from "./OUTPUT/OUTPUT";
 import { QuizMainReact } from "./Quiz/QuizMainReact";
 
 function App() {
   return (
     <>
+      <header>
+        <nav>
+          Navigation
+        </nav>
+      </header>
       {/* <Pagination /> */}
-      {/* <InfiniteScroll />  */}
-      {/* <BasicForm />          */}
-      {/* <OUTPUT /> */}
-      <QuizMainReact />
+      {/* <InfiniteScroll /> */}
+      {/* <BasicForm />
+      <OUTPUT /> */}
+      {/* <QuizMainReact /> */}
+      {/* <UseResizeMain /> */}
+      <PracticeHook />
     </>
     // <Parent />
   );

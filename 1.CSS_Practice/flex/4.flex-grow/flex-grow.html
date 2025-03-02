@@ -33,7 +33,6 @@
         }
         
         .flex-items:nth-of-type(4){
-            /* flex-grow: 1; */
             flex-grow: 1;
         }
      
@@ -45,7 +44,12 @@
 </head>
 
 <body>
-    <h3>Task: I want to adjust boxes that it can take full width</h3>
+    <h2>Learning Flex grow</h2>
+    <p>Flex grow describe how much element grow with respect to the flex Box
+        <ul>
+            <li>By default flex-grow:0</strong></li>
+        </ul>
+    </p>
     <section name="Default flex">
         <div>Default flex: items are not taking exact width of container</div>
         <div class="flex">
@@ -57,13 +61,14 @@
     </section>
     <hr>
     <section name="Box having flex:1">
-        <h4>Flex:1 divides the boxes equally</h4>
+        <h4>Task1  flex:1 divides the boxes equally</h4>
         <div>Add flex:1 to the box, it divides the items with equal space it automatically means</div>
         <ul>
             <li>flex-grow:1</li>
             <li>flex-shrink:1</li>
             <li>flex-basis:0</li>
         </ul>
+        <h4>Task1: Divide them equally use flex:1 to children</h3>
         <div class="flex">
             <div class="box-with-flex-property">Content is very long</div>
             <div class="box-with-flex-property">2</div>
@@ -72,7 +77,7 @@
         </div>
     </section>
     <section name="with flex grow">
-        <h4>if i want that my last item takes the whole remaining width</h4>
+        <h4>Task2: I want element 4 takes the full width of flex</h3>
         <div class="flex">
             <div class="flex-items">Content is very long</div>
             <div class="flex-items">2</div>

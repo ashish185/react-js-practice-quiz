@@ -21,6 +21,8 @@ For example, it can be used to:
     </div>
 </body>
 ```
+
+```
 Ans :hover,
 :first-of-type,:nth-of-type(n) 
 Ex p:first-of-type { color:yellow} 
@@ -29,7 +31,8 @@ Ex p:first-of-type { color:yellow}
 ```
 
 4. Pseudo element?
-Ans) p::after ->Insert content after every <p> element.
+```Ans) p::after ->Insert content after every <p> element.
+```
 
 5. How many ways you can add css in file?
  /* 3 ways to add css in html file
@@ -41,14 +44,16 @@ Ans) p::after ->Insert content after every <p> element.
 3) Inline: Passing the css in attribute <h1 style="color:blue;text-align:center;">This is a heading</h1>
 */
 
+```
 6. what is the diff between visibility:hidden and display:none?
 Ans) Both hides the element, but diff is that in visibility:none space of element remains,
 while in display: none space vanished.
+```
 
-7. What is CSS overflow property?
+```7. What is CSS overflow property?
 Ans) overflow property btati h ki what to do when content is too big to fit into an area.
 Ex: overflow:scroll, overflow:hidden,overflow:auto (Scroll tbhi aayega jab jrurat hogi).
-Note: Only applies for block level element like <div>,<p>,<h1>
+Note: Only applies for block level element like <div>,<p>,<h1>```
 
 8. Display?
 The display property specifies if/how an element is displayed.

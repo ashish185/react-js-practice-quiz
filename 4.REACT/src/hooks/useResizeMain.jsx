@@ -1,7 +1,7 @@
 import React from "react";
-import useResize from "./useResize";
+import useResize from "./useResizeWindow";
 
-function App() {
+const UseResizeMain = () => {
   const { width, height } = useResize();
 
   return (
@@ -10,4 +10,6 @@ function App() {
       <p>Window Height: {height}</p>
     </div>
   );
-}
+};
+
+export default UseResizeMain;

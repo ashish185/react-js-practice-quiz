@@ -38,10 +38,9 @@ const Pagination = () => {
 
   useEffect(() => {
     (async () => {
-       const { total, skip, limit, products } = = await getApiData();
+       const { total, skip, limit, products } = await getApiData();
       setData(products);
       setTotalPage(Math.ceil(total / limit));
-      console.log("response1", res, Math.ceil(total / limit));
       console.log("data", products);
     })();
   }, []);
